@@ -1,4 +1,4 @@
-﻿Abbreviation,Long_form,Source,Unit_levels,"Comment	"
-name,botanical name,The Plant List,,
-abb,abbreviation of species name,,,
-Numbers,Ids of plots,,,1-45 = Negative reference 2014; 46-90 = Restored plots in 2014; 91-135 = Restored plots in 2016
+﻿Variable,Definition,Source,Unit,Type,Values,"Comment	"
+name,botanical name,The Plant List,na,text,taxonomic names,na
+abb,abbreviation of species name,na,na,text,na,na
+Numbers,Ids of plots,na,na,float,na,1-45 = Negative reference 2014; 46-90 = Restored plots in 2014; 91-135 = Restored plots in 2016

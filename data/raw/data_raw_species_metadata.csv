@@ -1,4 +1,4 @@
-﻿Abbreviation,Long_form,Source,Unit_levels,"Comment	"
-name,botanical name,The Plant List,,
-abb,abbreviation of species name,,,
-14kat1,Ids of plots,,,14 = 2014; k = Control; at = site abbreviation; 1 = plot number of site
+﻿Variable,Definition,Source,Unit,Type,Values,"Comment	"
+name,botanical name,The Plant List,na,text,taxonomic names,na
+abb,abbreviation of species name,na,na,text,na,na
+14kat1,Ids of plots,na,na,float,na,14 = 2014; k = Control; at = site abbreviation; 1 = plot number of site
