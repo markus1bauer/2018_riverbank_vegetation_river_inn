@@ -113,4 +113,4 @@ ggplot() +
   themeMB()
 ggsave("figure_ordination_(800dpi_16x10cm).tiff",
        dpi = 800, width = 16, height = 10, units = "cm")
-#, path = "Z:/Documents/0_Uni/Projekt_7_Inn_Bachelorarbeit/3_Aufnahmen_und_Ergebnisse/2018_River_Res_Appl/ouput/figures")
+#, path = "Z:/Documents/0_Uni/Projekt_7_Inn_Bachelorarbeit/3_Aufnahmen_und_Ergebnisse/2018_River_Res_Appl/ouputs/figures")

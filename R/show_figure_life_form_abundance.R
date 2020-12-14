@@ -72,4 +72,4 @@ ggplot(sites, aes(year, no, fill = treatment, ymin = conf.low, ymax = conf.high)
   themeMB()
 ggsave("figure_lifeformNo_(800dpi_16x8.5cm).tiff",
        dpi = 800, width = 16, height = 8.5, units = "cm") 
-#, path = "Z:/Documents/0_Uni/Projekt_7_Inn_Bachelorarbeit/3_Aufnahmen_und_Ergebnisse/2018_River_Res_Appl/ouput/figures")
+#, path = "Z:/Documents/0_Uni/Projekt_7_Inn_Bachelorarbeit/3_Aufnahmen_und_Ergebnisse/2018_River_Res_Appl/ouputs/figures")
