@@ -1,0 +1,8 @@
+﻿Abbreviation,Long_form,Source,Unit_levels,"Comment	"
+name,botanical name,The Plant List,,
+abb,abbreviation of species name,,,
+lifeform,lifeform following Raunkjaer,Ellenberg et al. 2001,H = Hemicryptohyte; T = Therophyte; P = Phanerophyte; N = Rest,Nanonphanerophytes were defined as P and Thp as T
+growth,growth form,FloraWeb,,
+f,Ellenberg F value,Ellenberg et al. 2001,,
+n,Ellenberg N value,Ellenberg et al. 2001,,
+typ,typical species for certain habitat type,,,"see file ""data_raw_target_vegetation"""

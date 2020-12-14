@@ -1,0 +1,18 @@
+﻿Abbreviation,Long_form,Source,Unit_levels,"Comment	"
+name,botanical name,The Plant List,na,na
+descriptor,descriptor of the species,na,na,na
+abb,abbreviation of species name,na,na,na
+family,plant family,Rothmaler (2011),na,na
+lifeform,lifeform following Raunkjaer,Ellenberg et al. 2001,H = Hemicryptohyte; T = Therophyte; P = Phanerophyte; N = Rest,Nanonphanerophytes were defined as P and Thp as T
+growthform,growth form,Rothmaler (2011),na,na
+l,Ellenberg L value,Ellenberg et al. 2001,na,na
+t,Ellenberg T value,Ellenberg et al. 2001,na,na
+k,Ellenberg K value,Ellenberg et al. 2001,na,na
+f,Ellenberg F value,Ellenberg et al. 2001,na,na
+r,Ellenberg R value,Ellenberg et al. 2001,na,na
+n,Ellenberg N value,Ellenberg et al. 2001,na,na
+sociology,plant sociology abbreviation,Ellenberg et al. 2001,na,na
+typ,typical species for certain habitat types,na,na,"see file ""data_raw_target_vegetation"""
+rlg,red list of Germany,Ludwig & Schnittler (1996),* = unthreated; V = early warning list,na
+rlb,red list of Bavaria,Bavarian ministry for environment 2005,na,na
+neo,neophytes,Nehring et al. (2013),"1 = yes, 0 = no",na

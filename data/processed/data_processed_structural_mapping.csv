@@ -1,0 +1,9 @@
+site,treatment,totalArea_2014,totalArea_2016,gravelArea_2014,gravelArea_2016,sandArea_2014,sandArea_2016,reedArea_2014,reedArea_2016,tallherbalvegetationArea_2014,tallherbalvegetationArea_2016,gravelRatio_2014,sandRatio_2014,reedRatio_2014,tallherbalvegetationRatio_2014,gravelRatio_2016,sandRatio_2016,reedRatio_2016,tallherbalvegetationRatio_2016,totalArea_Change,gravelArea_Change,sandArea_Change,reedArea_Change,tallherbalvegetationArea_Change,gravelRatio_Change,sandRatio_Change,reedRatio_Change,tallherbalvegetationRatio_Change
+Rottmuendung,Gravel/Removal_of_embankment,2466.5,2466.5,0,0,2466.5,2357.9,0,0,0,108.6,0,1,0,0,0,0.955969997972836,0,0.044030002027164,0,0,-108.6,0,108.6,0,-0.044030002027164,0,0.044030002027164
+Attler Au,Removal_of_embankment,279.4,279.4,0,0,279.4,0,0,279.4,0,0,0,1,0,0,0,0,1,0,0,0,-279.4,279.4,0,0,-1,1,0
+Attler Au,Gravel_addition,2002.8,2485.5,2002.8,0,0,0,0,2485.5,0,0,1,0,0,0,0,0,1,0,482.7,-2002.8,0,2485.5,0,-1,0,1,0
+Laimbachmüdung,Gravel_addition,852.8,2312.8,852.8,29.9,0,0,0,2282.9,0,0,1,0,0,0,0.012928052576963,0,0.987071947423037,0,1460,-822.9,0,2282.9,0,-0.987071947423037,0,0.987071947423037,0
+Freihamer Au,Sand_addition,517.3,812.7,0,0,517.3,0,0,812.7,0,0,0,1,0,0,0,0,1,0,295.4,0,-517.3,812.7,0,0,-1,1,0
+Vorderleiten,Sand_addition,1625.7,1120.8,0,0,1625.7,0,0,1120.8,0,0,0,1,0,0,0,0,1,0,-504.9,0,-1625.7,1120.8,0,0,-1,1,0
+Wies,Sand_addition,2245.6,3963.5,0,0,2245.6,0,0,3963.5,0,0,0,1,0,0,0,0,1,0,1717.9,0,-2245.6,3963.5,0,0,-1,1,0
+Hechtloch,Removal_of_embankment,87.9,76.2,0,0,87.9,0,0,0,0,0,0,1,0,0,0,0,0,0,-11.7,0,-87.9,0,0,0,-1,0,0

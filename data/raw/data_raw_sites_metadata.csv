@@ -1,0 +1,24 @@
+﻿Abbreviation,Long_form,Source,Unit_levels,"Comment	"
+no,serial number,na,na,na
+plot,plot ID,na,na,block ID + plot Number
+block,block ID,na,na,na
+year,year of observation,na,Control = negative reference observed in 2014,na
+site,site name of the observations,na,na,na
+easting,na,GPS device,UTM,na
+northing,na,GPS device,UTM,na
+date,date of observation,na,na,na
+barrier,next barrier downstream,https://geoportal.bayern.de/bayernatlas/,na,na
+barrierriverKm,River kilometer of the barrier downstream,https://geoportal.bayern.de/bayernatlas/,km,na
+plotriverKm,River kilometer of the plot,https://geoportal.bayern.de/bayernatlas/,na,na
+treatment,restoration measurement,na,removal_embankment; sand addition; gravel addition,treatment for control sites is hypothetical
+plotSize,na,na,m^2,na
+habitatType,category of habitat type,na,na,na
+shrubHeight,na,na,cm,na
+shrubCover,na,na,%,na
+herbHeight,na,na,cm,na
+herbCover,na,na,%,na
+mossCover,na,na,%,na
+soilCover,na,na,%,na
+substrate,type of the substrate,na,na,na
+slope,slope of the embankment,na,Sand; Gravel; Water,na
+ph,pH measured in 2014,na,na,na

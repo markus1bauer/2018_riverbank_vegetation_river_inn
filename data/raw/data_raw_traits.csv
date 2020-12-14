@@ -1,0 +1,169 @@
+﻿name,descriptor,abb,family,lifeform,growthform,l,t,k,f,r,n,sociology,typ,rlg,rlb,neo
+Acer_campestre,L.,Acercamp,Aceraceae,P,wood,5,6,4,5,7,6,8.4,na,*,na,0
+Acer_pseudoplatanus,L.,Acerpseu,Aceraceae,P,wood,4,na,4,6,na,7,8.43,na,*,na,0
+Achillea_millefolium,L.,Achimill,Asteraceae,N,perennial,8,na,na,4,na,5,5.42,na,*,na,0
+Aegopodium_podagraria,L.,Aegopoda,Apiaceae,N,perennial,5,5,3,6,7,8,3.531,na,*,na,0
+Agrostis_gigantea,Roth,Agrogiga,Poaceae,N,perennial,7,5,3,8,7,6,5.4,na,*,na,0
+Agrostis_stolonifera,L.,Agrostol,Poaceae,na,na,3,5,3,5,7,5,8.43,na,*,na,0
+Alnus_glutinosa,(L.) Gaertn.,Alnuglut,Betulaceae,P,wood,6,4,5,7,8,na,8.433,na,*,na,0
+Alnus_incana,(L.) Moench,Alnuinca,Betulaceae,P,wood,5,5,3,9,6,na,8.211,na,*,na,0
+Alopecurus_aequalis,Sobol.,Alopaequ,Poaceae,H_T,annual_biennial,9,na,5,9,na,9,3.21,Gravel Sand,*,na,0
+Arabidopsis_arenosa,(L.) Lawalrée,Arabaren,Brassicaceae,N,biennial,9,na,4,4,6,2,na,na,*,na,0
+Arenaria_serpyllifolia,L.,Arenserp,Caryophyllaceae,T,annual,8,na,na,4,7,na,na,na,*,na,0
+Barbarea_stricta,Andrz. ex Besser,Barbstri,Brassicaceae,N,biennial,8,6,7,7,7,8,3.531,na,*,2,0
+Berula_erecta,(Huds.) Coville,Beruerec,Apiaceae,N,perennial,8,6,3,10,8,6,1.513,Rohr,*,na,0
+Betula_pendula,Roth,Betupend,Betulaceae,P,wood,7,na,na,na,na,na,na,na,*,na,0
+Brachypodium_pinnatum,(L.) P.Beauv.,Bracpinn,Poaceae,N,perennial,6,5,5,4,7,4,5.3,na,*,na,0
+Brachypodium_sylvaticum,(Huds.) P.Beauv,Bracsylv,Poaceae,N,perennial,3,5,3,5,6,6,8.4,na,*,na,0
+Bromus_erectus,Huds.,Bromerec,Poaceae,N,perennial,8,5,2,3,8,3,5.32,na,*,na,0
+Calamagrostis_epigejos,(L.) Roth,Calaepig,Poaceae,N,perennial,7,5,7,na,na,6,na,na,*,na,0
+Calamagrostis_pseudophragmites,(Haller f.) Koeler,Calapseu,Poaceae,N,perennial,8,6,8,7,9,3,4.441,Gravel,2,2,0
+Calystegia_sepium,(L.) R. Br.,Calysepi,Convolvulaceae,N,perennial,8,6,5,6,7,9,3.52,Tall herbal vegetation,*,na,0
+Cardamine_impatiens,L.,Cardimpa,Brassicaceae,H_T,annual,5,na,4,6,7,8,3.532,na,*,na,0
+Carduus_personata,(L.) Jacq.,Cardpers,Asteraceae,N,biennial,7,4,2,8,8,8,na,na,*,na,0
+Carex_acuta,L.,Careacuta,Cyperaceae,na,perennial,na,na,na,na,na,na,na,na,*,na,0
+Carex_acutiformis,Ehrh.,Careacuti,Cyperaceae,N,perennial,8,5,3,10,8,8,1.513,Reed,*,na,0
+Carex_cuprina,(Sándor ex Heuff.) Nendtv. ex A.Kern.,Carecupr,Cyperaceae,N,perennial,6,6,2,8,7,6,8.433,na,V,na,0
+Carex_elata,All.,Careelat,Cyperaceae,N,perennial,8,na,2,10,na,5,1.5141,Reed,*,na,0
+Carex_elongata,L.,Careelon,Cyperaceae,N,perennial,4,6,3,9,7,6,8.211,na,*,3,0
+Carex_flacca,Schreb.,Careflac,Cyperaceae,N,perennial,7,na,3,6,8,na,na,na,*,na,0
+Carex_hirta,L.,Carehirt,Cyperaceae,N,perennial,7,6,3,6,na,5,3.81,Sand,*,na,0
+Carex_hostiana,DC.,Carehost,Cyperaceae,N,perennial,8,5,2,9,6,2,1.721,na,2,3,0
+Carex_nigra,(L.) Reichard,Carenigr,Cyperaceae,N,perennial,8,na,3,8,3,2,1.73,na,*,na,0
+Carex_pseudocyperus,L.,Carepseu,Cyperaceae,N,perennial,7,6,3,9,6,5,1.51,Reed,*,3,0
+Carlina_vulgaris,L.,Carlvulg,Asteraceae,H_T,perennial,7,6,3,6,na,4,54,na,*,na,0
+Carpinus_betulus,L.,Carpbetu,Betulaceae,P,wood,4,6,4,na,na,na,8.432,na,*,na,0
+Centaurium_erythraea,Rafn,Centeryt,Gentianaceae,H_T,annual_biennial,8,6,5,5,6,6,6.21,na,V,na,0
+Chaenorhinum_minus,(L.) Lange,Chaeminu,Scrophulariaceae,T,summer_annual,8,6,3,4,8,5,3.3,na,*,na,0
+Cirsium_arvense,(L.) Scop.,Cirsarve,Asteraceae,N,perennial,8,5,na,na,na,7,3,na,*,na,0
+Cirsium_oleraceum,(L.) Scop.,Cirsoler,Asteraceae,N,perennial,6,na,3,7,8,5,5.415,na,*,na,0
+Cirsium_palustre,(L.) Scop.,Cirspalu,Asteraceae,N,perennial,7,5,3,8,4,3,5.41,na,*,na,0
+Cirsium_vulgare,(Savi) Ten.,Cirsvulg,Asteraceae,N,biennial,8,5,3,5,7,8,3.5,Tall herbal vegetation,*,na,0
+Clematis_vitalba,L.,Clemvita,Ranunculaceae,N,wood,7,6,3,5,7,7,8.41,na,*,na,0
+Cornus_sanguinea,L.,Cornsang,Cornaceae,P,wood,7,5,4,5,7,na,8.41,na,*,na,0
+Coryllus_avellana,L.,Coryavel,Betulaceae,P,wood,6,5,3,na,na,5,8.4,na,*,na,0
+Dactylis_glomerata,L.,Dactglom,Poaceae,N,perennial,7,na,3,5,na,6,na,na,*,na,0
+Deschampsia_cespitosa,P.Beauv.,Desccespi,Poaceae,N,perennial,6,na,na,7,na,3,na,na,*,na,0
+Echinochloa_crus-galli,(L.) P.Beauv.,Echicrus,Poaceae,T,summer_annual,6,7,5,5,na,8,3,na,*,na,0
+Eleocharis_mamillata,(H.Lindb.)H.Lindb.,Eleomami,Cyperaceae,N,perennial,8,5,na,10,4,3,1.712,na,*,3,0
+Eleocharis_palustris,(L.) Roem. & Schult.,Eleopalu,Cyperaceae,N,perennial,8,na,na,10,na,?,1.51,Reed,*,*,0
+Elymus_repens,(L.) Gould,Elymrepe,Poaceae,N,perennial,7,na,3,4,na,3,5.42,na,*,na,0
+Epilobium_hirsutum,L.,Epilhirs,Onagraceae,N,na,7,5,5,8,8,8,3.521,Tall herbal vegetation,*,na,0
+Epilobium_parviflorum,Schreb.,Epilparv,Onagraceae,N,perennial,7,5,3,9,8,6,1.513,Reed,*,na,0
+Epilobium_tetragonum,L.,Epiltetr,Onagraceae,N,perennial,7,6,4,8,6,5,3,na,*,na,0
+Equisetum_arvense,L.,Equiarve,Equisetaceae,N,perennial,6,na,na,6,na,3,na,na,*,na,0
+Equisetum_hyemale,L.,Equihyem,Equisetaceae,N,perennial,5,5,5,7,7,6,8.433,na,*,na,0
+Equisetum_palustre,L.,Equipalu,Equisetaceae,N,perennial,7,na,5,8,na,3,5.41,na,*,na,0
+Equisetum_variegatum,Schleich. ex F. Weber & D. Mohr,Equivari,Equisetaceae,N,perennial,8,3,7,9,8,2,1.722,na,2,3,0
+Erigeron_acris,L.,Erigacri,Asteraceae,H_T,na,9,5,7,4,8,2,5.322,na,*,na,0
+Erigeron_annuus,(L.) Pers.,Erigannu,Asteraceae,N,na,7,6,na,6,na,8,3.5,Tall herbal vegetation,*,na,0
+Erigeron_canadensis,L.,Erigcana,Asteraceae,H_T,annual,8,6,na,4,na,5,3.33,na,*,na,0
+Euonymus_europaeus,L.,Euoneuro,Celastraceae,P,wood,6,5,3,5,8,5,8.41,na,*,na,0
+Eupatorium_cannabinum,L.,Eupacann,Asteraceae,N,perennial,6,na,na,8,na,na,3.521,Tall herbal vegetation,*,na,0
+Euphorbia_cyparissias,L.,Euphcypa,Euphorbiaceae,N,perennial,8,na,4,3,na,3,5.3,na,*,na,0
+Festuca_arundinacea,Schreb.,Festarun,Poaceae,N,perennial,8,5,na,7,7,4,3.811,Sand,*,na,0
+Festuca_spec,na,Festspec,Poaceae,N,na,na,na,na,na,na,na,na,na,na,na,na
+Filipendula_ulmaria,(L.) Maxim.,Filiulma,Rosaceae,N,perennial,7,5,na,8,na,4,5.412,na,*,na,0
+Fragaria_vesca,L.,Fragvesc,Rosaceae,N,perennial,7,na,5,5,na,6,6.2,na,*,na,0
+Fraxinus_excelsior,L.,Fraxexce,Oleaceae,P,wood,7,7,3,5,6,5,3.31,na,*,na,0
+Galium_anisophyllon,Vill.,Galianis,Rubiaceae,N,perennial,na,na,na,na,na,na,na,na,*,na,0
+Galium_aparine,L.,Galiapar,Rubiaceae,T,annual,7,6,3,na,6,8,3.5,Tall herbal vegetation,*,na,0
+Galium_mollugo,L.,Galimoll,Rubiaceae,N,perennial,7,6,3,4,7,?,na,na,*,na,0
+Geranium_robertianum,L.,Gerarobe,Geraniaceae,H_T,annual,5,na,3,na,na,7,3.532,na,*,na,0
+Glechoma_hederacea,L.,Glechede,Lamiaceae,N,perennial,6,6,3,6,na,7,3.53,na,*,na,0
+Hedera_helix,L.,Hedeheli,Araliaceae,N,wood,4,5,2,5,na,na,na,na,*,na,0
+Herniaria_glabra,L.,Hernglab,Caryophyllaceae,H_T,na,8,6,5,3,4,2,5.2,na,*,na,0
+Hippuris_vulgaris,L.,Hippvulg,Hippuridaceae,N,na,7,5,na,10,8,na,1.511,Reed,3,3,0
+Holcus_lanatus,L.,Holclana,Poaceae,N,perennial,9,6,na,9,7,9,3.211,na,*,na,0
+Humulus_lupulus,L.,Humulupu,Cannabaceae,N,perennial,7,6,3,8,6,8,8,na,*,na,0
+Hypericum_maculatum,Crantz,Hypemacu,Hypericaceae,N,perennial,8,na,3,6,3,2,5.1,na,*,na,0
+Hypericum_perforatum,L.,Hypeperf,Hypericaceae,N,perennial,7,6,5,4,6,3,6.1,na,*,na,0
+Impatiens_glandulifera,Royle,Impaglan,Balsaminaceae,T,summer_annual,5,7,2,8,7,7,3.52,Tall herbal vegetation,*,na,1
+Iris_pseudacorus,L.,Irispseu,Iridaceae,N,perennial,4,na,4,7,5,7,1.51,Reed,*,na,0
+Isolepis_setacea,(L.) R.Br.,Isolseta,Cyperaceae,H_T,na,6,5,2,9,5,3,3.111,Sand,V,na,0
+Jacobaea_aquatica,"(Hill) ""G.Gaerthn.. B.Mey. & Schreb.""",Jacoaqua,Asteraceae,N,perennial,7,6,2,8,4,5,5.415,na,V,na,0
+Juncus_acutiflorus,Ehrh. Ex Hoffm,Juncacut,Juncaceae,N,perennial,9,6,2,8,5,3,5.414,na,*,na,0
+Juncus_articulatus,L.,Juncart,Juncaceae,N,perennial,8,na,3,9,na,2,1.7,na,*,na,0
+Juncus_bulbosus,L.,Juncbulb,Juncaceae,N,perennial,6,6,2,10,5,2,1.41,na,*,na,0
+Juncus_conglomeratus,L.,Junccong,Juncaceae,N,perennial,8,5,3,7,4,3,5.41,na,*,na,0
+Juncus_effusus,L.,Junceffu,Juncaceae,N,perennial,8,5,3,7,3,4,5.41,na,*,na,0
+Juncus_inflexus,L.,Juncinfl,Juncaceae,N,perennial,8,5,3,7,8,4,3.811,Sand,*,na,0
+Juncus_tenuis,Willd.,Junctenu,Juncaceae,N,perennial,6,6,3,6,5,5,3.711,na,*,na,0
+Lamium_galeobdolon,(L.) L.,Lamigale,Lamiaceae,N,perennial,3,5,4,5,7,5,8.43,na,*,na,0
+Lamium_maculatum,(L.) L.,Lamimace,Lamiaceae,N,perennial,5,na,4,6,7,8,na,na,*,na,0
+Lonicera_xylosteum,L.,Lonixylo,Caprifoliaceae,P,wood,5,6,4,5,7,6,8.4,na,*,na,0
+Lycopus_europaeus,L.,Lycoeuro,Lamiaceae,N,perennial,7,6,5,9,7,7,1.5,Reed,*,na,0
+Lysimachia_nummularia,L.,Lysinumm,Primulaceae,N,perennial,4,6,4,6,na,na,na,na,*,na,0
+Lythrum_salicaria,L.,Lythsali,Lythraceae,N,perennial,7,5,5,8,6,na,5.412,na,*,na,0
+Matricaria_chamomilla,L.,Matrcham,Asteraceae,T,annual,7,6,5,5,5,5,3.421,na,*,na,0
+Medicago_lupulina,L.,Medilupu,Fabaceae,H_T,na,7,5,na,4,8,na,5.322,na,*,na,0
+Melilotus_officinalis,(L.) Pall.,Melioffi,Fabaceae,N,annual_biennial,8,6,6,3,8,3,3.542,na,*,na,0
+Mentha_aquatica,L.,Mentaqua,Lamiaceae,N,perennial,7,5,3,9,7,5,1.51,Reed,*,na,0
+Mentha_longifolia,(L.) L.,Mentlong,Lamiaceae,N,perennial,7,5,4,8,9,7,3.811,Sand,*,na,0
+Myosotis_scorpioides,L.,Myosscor,Boraginaceae,na,na,4,na,na,6,na,na,na,na,*,na,0
+Phalaris_arundinacea,L.,Phalarun,Poaceae,N,perennial,7,5,na,9,7,7,1.51,Reed,*,na,0
+Phragmites_australis,(Cav.) Trin. ex Steud.,Phraaust,Poaceae,N,perennial,7,5,na,10,7,7,1.511,Reed,*,na,0
+Pilosella_officinarum,Vaill.,Pilooffi,Asteraceae,N,perennial,7,na,3,4,na,2,5,na,*,na,0
+Pilosella_piloselloides,(Vill.) Soják+,Pilopilo,Asteraceae,N,perennial,9,6,4,4,8,2,4.441,Gravel,*,na,0
+Plantago_lanceolata,L.,Planlanc,Plantaginaceae,N,perennial,6,na,3,na,na,na,5.4,na,*,na,0
+Plantago_major,L.,Planmajo,Plantaginaceae,N,perennial,8,na,na,5,na,6,3.71,na,*,na,0
+Poa_annua,L.,Poaannu,Poaceae,T,na,7,na,5,6,na,8,n.a,na,*,na,0
+Poa_compressa,L.,Poacomp,Poaceae,N,perennial,9,na,4,3,9,3,5.424,na,*,na,0
+Poa_palustris,L.,Poapalu,Poaceae,N,perennial,7,5,5,9,8,7,1.51,Reed,*,na,0
+Poa_pratensis,L.,Poaprat,Poaceae,N,perennial,6,na,na,5,na,6,5.4,na,*,na,0
+Poa_trivalis,L.,Poatriv,Poaceae,N,perennial,6,na,3,7,na,7,5.4,na,*,na,0
+Populus_nigra,L.,Popunigr,Salicaceae,P,wood,5,6,6,8,7,7,8.112,na,3,na,0
+Potentilla_anserina,L.,Poteanse,Rosaceae,N,perennial,7,6,na,6,na,7,3.811,Sand,*,na,0
+Potentilla_erecta,(L.) Raeusch.,Poteerec,Rosaceae,N,perennial,6,na,3,na,na,2,5.1,na,*,na,0
+Potentilla_neumanniana,Rchb.,Poteneum,Rosaceae,N,perennial,na,na,na,na,na,na,na,na,*,na,0
+Potentilla_reptans,L.,Poterept,Rosaceae,N,perennial,6,6,3,6,7,5,3.811,Sand,*,na,0
+Potentilla_sterilis,(L.) Garcke,Potester,Rosaceae,N,perennial,5,5,2,5,6,6,8.432,na,*,na,0
+Prunella_vulgaris,L.,Prunvulg,Lamiaceae,N,perennial,7,na,3,5,7,na,5.4,na,*,na,0
+Ranunculus_acris,L.,Ranuacri,Ranunculaceae,N,perennial,7,na,3,6,na,na,5.4,na,*,na,0
+Ranunculus_repens,L.,Ranurepe,Ranunculaceae,N,perennial,6,na,na,7,na,na,na,na,*,na,0
+Reseda_lutea,L.,Reselute,Resedaceae,N,annual_biennial,7,6,3,3,8,5,3.54,na,*,na,0
+Rhinanthus_glacialis,Personnat,Rhinglac,Scrophulariaceae,T,na,7,5,3,6,7,2,na,na,3,3,0
+Rorippa_palustris,(L.) Besser,Roripalu,Brassicaceae,T,na,7,na,na,8,na,8,na,na,*,na,0
+Rubus_caesius,L.,Rubucaes,Rosaceae,N,wood,6,5,4,na,8,7,na,na,*,na,0
+Rumex_obtusifolius,L.,Rumeobtu,Polygonaceae,N,perennial,7,5,3,6,na,9,3.811,Sand,*,na,0
+Rumex_palustris,Sm.,Rumepalu,Polygonaceae,T,annual_biennial,8,7,3,9,9,8,3.211,Gravel Sand,*,3,0
+Sagina_nodosa,(L.) Fenzl,Saginod,Caryophyllaceae,N,perennial,8,6,3,8,8,5,3.811,Sand,2,na,0
+Sagina_procumbens,L.,Sagiproc,Caryophyllaceae,N,perennial,7,na,3,5,7,6,3.711,na,*,na,0
+Salix_alba,L.,Salialba,Salicaceae,P,wood,5,6,6,8,8,7,8.112,na,*,na,0
+Salix_alba_x_purpurea,na,Saliaxp,Salicaceae,P,wood,na,na,na,na,na,na,na,na,na,na,na
+Salix_aurita,L.,Saliauri,Salicaceae,P,wood,7,na,3,8,4,3,8.212,na,*,na,0
+Salix_caprea,L.,Salicapr,Salicaceae,P,wood,7,na,3,6,7,7,6.213,na,*,na,0
+Salix_cinerea,L.,Salicine,Salicaceae,P,wood,7,na,5,9,5,4,8.212,na,*,na,0
+Salix_daphnoides,Vill.,Salidaph,Salicaceae,P,wood,6,na,4,8,8,4,8.111,na,2,3,0
+Salix_myrsinifolia,Salisb.,Salimyrs,Salicaceae,P,wood,7,4,6,7,8,6,na,na,3,na,0
+Salix_purpurea,L.,Salipurp,Salicaceae,P,wood,8,5,4,na,8,na,8.11,na,*,na,0
+Salix_silesiaca,Willd.,Salisile,Salicaceae,P,wood,na,na,na,na,na,na,na,na,*,na,0
+Salix_triandra,L.,Salitria,Salicaceae,P,wood,7,5,5,8,7,5,8.112,na,*,na,0
+Salix_viminalis,L.,Salivimi,Salicaceae,P,wood,7,6,7,8,7,na,8.112,na,*,na,0
+Scirpus_sylvaticus,L.,Scirsylv,Cyperaceae,N,perennial,6,5,4,8,4,4,5.415,na,*,na,0
+Scrophularia_nodosa,L.,Scronodo,Scrophulariaceae,N,perennial,4,5,3,6,6,7,8.43,na,*,na,0
+Scrophularia_umbrosa,Dumort.,Scroumbr,Scrophulariaceae,N,perennial,7,6,5,9,8,7,3.521,Tall herbal vegetation,*,na,0
+Scutellaria_galericulata,L.,Scutgale,Lamiaceae,N,perennial,7,6,5,9,7,6,1.514,Reed,*,na,0
+Silene_latifolia,Poir.,Silelati,Caryophyllaceae,N,short_perennial,8,6,na,4,na,7,3,na,*,na,0
+Solanum_dulcamara,L.,Soladulc,Solanaceae,N,perennial,7,5,na,8,na,8,na,na,*,na,0
+Solidago_canadensis,L.,Solicana,Asteraceae,N,perennial,8,6,5,na,na,6,3.5,Tall herbal vegetation,*,na,1
+Solidago_gigantea,Aiton,Soligiga,Asteraceae,N,perennial,8,6,5,6,na,7,3.5,Tall herbal vegetation,*,na,1
+Sonchus_asper,(L.) Hill,Soncaspe,Asteraceae,T,annual,7,5,na,6,7,7,3.31,na,*,na,0
+Stellaria_aquatica,(L.) Scop.,Stelaqua,Caryophyllaceae,N,perennial,7,5,3,8,7,8,3.52,Tall herbal vegetation,*,na,0
+Symphytum_officinale,L.,Sympoffi,Boraginaceae,N,perennial,7,6,3,8,na,8,na,na,*,na,0
+Taraxacum_campylodes,G.E.Haglund,Taracamp,Asteraceae,N,na,7,na,na,5,na,7,na,na,*,na,0
+Trifolium_hybridum,L.,Trifhybr,Fabaceae,N,perennial,7,6,5,6,7,5,3.811,Sand,*,na,0
+Trifolium_pratense,L.,Trifprat,Fabaceae,N,perennial,7,na,3,na,na,na,5.4,na,*,na,0
+Tripleurospermum_maritimum,(L.) W.D.J.Koch,Tripmari,Asteraceae,T,na,9,6,3,6,7,8,2.81,na,*,na,0
+Tussilago_farfara,L.,Tussfarf,Asteraceae,N,perennial,8,na,3,6,8,na,3,na,*,na,0
+Typha_latifolia,L.,Typhlati,Typhaceae,N,perennial,8,6,5,10,7,8,1.511,Reed,*,na,0
+Urtica_dioica,L.,Urtidioi,Urticaceae,N,perennial,na,na,na,6,7,8,3.5,Tall herbal vegetation,*,na,0
+Valeriana_officinalis,L.,Valeoffi,Valerianaceae,N,perennial,7,6,5,8,7,5,5.412,na,*,na,0
+Verbascum_densiflorum,Bertol.,Verbdens,Scrophulariaceae,N,na,8,6,5,4,8,5,3.541,na,*,na,0
+Verbascum_nigrum,L.,Verbnigr,Scrophulariaceae,N,short_perennial,7,5,5,5,7,7,6.212,na,*,na,0
+Verbascum_thapsus,L.,Verbthap,Scrophulariaceae,N,na,8,na,3,4,7,7,6.21,na,*,na,0
+Veronica_arvensis,L.,Veroarve,Scrophulariaceae,T,summer_annual,7,6,3,4,6,na,5.2,na,*,na,0
+Veronica_beccabunga,L.,Verobecc,Scrophulariaceae,N,perennial,7,na,3,10,7,6,1.513,Reed,*,na,0
+Veronica_catenata,Pennell,Verocate,Scrophulariaceae,N,summer_annual,na,na,na,na,na,na,na,na,*,3,0
+Viburnum_lantana,L.,Vibulant,Caprifoliaceae,P,wood,7,5,2,4,8,4,8.412,na,*,na,0
+Vicia_cracca,L.,Vicicrac,Fabaceae,N,perennial,7,5,na,5,na,na,5.4,na,*,na,0
