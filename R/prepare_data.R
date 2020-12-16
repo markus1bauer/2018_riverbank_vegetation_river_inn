@@ -2,16 +2,18 @@
 
 
 
-### Packages ---------------------------------------------------------------------------------------------
+### Packages ###
 library(tidyverse)
 library(vegan)
 
-### Start----------------------------------------------------------------------------------------------
+### Start ###
 #installr::updateR(browse_news = F, install_R = T, copy_packages = T, copy_Rprofile.site = T, keep_old_packages = T, update_packages = T, start_new_R = F, quit_R = T)
 rm(list = ls())
 setwd("Z:/Documents/0_Uni/Projekt_7_Inn_Bachelorarbeit/3_Aufnahmen_und_Ergebnisse/2018_River_Res_Appl/data/raw")
 
-### Load data ----------------------------------------------------------------------------------------
+
+### 1 Load data #####################################################################################
+
 sites <- read_csv("data_raw_sites.csv", col_names = T, na = "na", col_types = 
                         cols(
                           .default = col_double(),
@@ -59,16 +61,18 @@ traits <- read_csv("data_raw_traits.csv", col_names = T, na = "na", col_types =
 (traits <- select(traits, name, abb, lifeform, growthform, n, f, typ, neo))
 
 
-### Create variables ----------------------------------------------------------------------------------
+### 2 Create variables #####################################################################################
+
 ### Variable: dummies for confidence interval
 sites$conf.low <- c(1:135)
 sites$conf.high <- c(1:135)
 
-### Variable: barrier distance ####
+
+### a Barrier distance -------------------------------------------------------------------------------------------
 sites$barrierDist <- sites$plotriverKm - sites$barrierriverKm
 sites <- select(sites, -plotriverKm, -barrierriverKm)
 
-#### Variable: species richness ####
+### b species richness -------------------------------------------------------------------------------------------
 diversity <- column_to_rownames(species, "name")
 diversity <- t(select(diversity, -abb))
 sites$shannon <- diversity(diversity, index = "shannon")
@@ -76,7 +80,7 @@ sites$simpson <- diversity(diversity, index = "simpson")
 sites$speciesRich <- specnumber(diversity)
 rm(diversity)
 
-#### Variable: species richness of all life forms ####
+### c species richness of all life forms -------------------------------------------------------------------------------------------
 lifeform <- select(traits, name, lifeform)
 
 therophytes <- inner_join(species, filter(lifeform, lifeform == "T" | lifeform == "H_T"), by = "name")
@@ -97,7 +101,7 @@ sites$Wood <- specnumber(t(wood))
 
 rm(therophytes, perennials, wood, lifeform)
 
-#### Variable: Target species cover ####
+### d target species cover -------------------------------------------------------------------------------------------
 typ <- select(traits, name, typ)
 
 reed <- inner_join(species, filter(typ, typ == "Reed"), by = "name")
@@ -120,7 +124,9 @@ rm(reed, sand, gravel, typ)
 
 sites$aimCover <- sites$reedCover + sites$sandCover + sites$gravelCover
 
-### Save processed data-------------------------------------------------------------------------------
+
+### 3 Save processed data #####################################################################################
+
 write.table(species, "Z:/Documents/0_Uni/Projekt_7_Inn_Bachelorarbeit/3_Aufnahmen_und_Ergebnisse/2018_River_Res_Appl/data/processed/data_processed_species.csv", sep = ",", row.names = F, quote = F)
 write.table(sites, "Z:/Documents/0_Uni/Projekt_7_Inn_Bachelorarbeit/3_Aufnahmen_und_Ergebnisse/2018_River_Res_Appl/data/processed/data_processed_sites.csv", sep = ",", row.names = F, quote = F)
 write.table(traits, "Z:/Documents/0_Uni/Projekt_7_Inn_Bachelorarbeit/3_Aufnahmen_und_Ergebnisse/2018_River_Res_Appl/data/processed/data_processed_traits.csv", sep = ",", row.names = F, quote = F)

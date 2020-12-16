@@ -42,7 +42,7 @@ species <- select(species, !(name))
 species <- column_to_rownames(species, "abb")
 species <- species[,c(16:45,61:90,106:135)]
 species <- species[rowSums(species) > 0, colSums(species) > 0]
-species <- as.tibble(t(species))
+species <- as_tibble(t(species))
 
 
 
