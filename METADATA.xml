@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="f755fc7c-8fff-4677-a462-686226b86972" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <dataset>
+    <title>Resilience of riparian vegetation after restoration measures on River Inn</title>
+    <creator>
+      <individualName>
+        <givenName>Markus</givenName>
+        <surName>Bauer</surName>
+      </individualName>
+      <electronicMailAddress>markusbauer@mailbox.org</electronicMailAddress>
+    </creator>
+    <pubDate>2018</pubDate>
+    <language>English</language>
+    <abstract>River restoration is widely applied, although its effects are poorly understood, and degraded hab-
+itats might be difficult to improve. Moreover, there is a lack of monitoring as well as few system-
+atic comparisons of restoration methods. This study presents results of a 4 - year monitoring on
+River Inn (southern Germany) investigating restoration by gravel or sand addition or embankment
+removal. The results were compared with reference sites that represent the pre - restoration
+conditions. At the landscape scale, we analysed vegetation types based on aerial photographs,
+whereas at a smaller scale, we undertook vegetation surveys and evaluated species composition,
+growth, and life form, as well as the proportion of the target vegetation. After 4 years, the data
+indicated a 'negative resilience' of the vegetation back to the state prior to restoration. The struc-
+tural analysis revealed an extensive spread of reed at expense of bare soil. Thus, the species com-
+position largely regressed to the pre - restoration conditions, and neither annuals nor other
+pioneer species showed a long - term benefit of river restoration. There were differences among
+the three restoration treatments after 2 years, but no longer after 4 years. However, the river res-
+toration had three positive outcomes: (a) There was a temporary benefit for pioneer vegetation
+that most likely replenished the seed bank of the respective species, (b) the valuable reed commu-
+nities showed resilience, and (c) the measures allowed some practical learning as expected for
+adaptive restoration.</abstract>
+    <keywordSet>
+      <keyword>rivers</keyword>
+      <keyword>monitoring</keyword>
+      <keyword>restoration</keyword>
+      <keyword>riparian</keyword>
+      <keyword>vegetation dynamics</keyword>
+      <keywordThesaurus>LTER controlled vocabulary</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>CC BY 4.0</intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>River Inn near Wasserburg</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>12.1506</westBoundingCoordinate>
+          <eastBoundingCoordinate>12.2672</eastBoundingCoordinate>
+          <northBoundingCoordinate>47.9849</northBoundingCoordinate>
+          <southBoundingCoordinate>48.1373</southBoundingCoordinate>
+          <boundingAltitudes>
+            <altitudeMinimum>413</altitudeMinimum>
+            <altitudeMaximum>433</altitudeMaximum>
+            <altitudeUnits>meter</altitudeUnits>
+          </boundingAltitudes>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2014-06-01</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2016-07-31</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>Kingdom</taxonRankName>
+          <taxonRankValue>Plantae</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>Division</taxonRankName>
+            <taxonRankValue>Tracheophyta</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>Subdivision</taxonRankName>
+              <taxonRankValue>Spermatophytina</taxonRankValue>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+    </coverage>
+    <contact>
+      <individualName>
+        <givenName>Markus</givenName>
+        <surName>Bauer</surName>
+      </individualName>
+      <organizationName>Technical University of Munich</organizationName>
+      <address>
+        <deliveryPoint>Emil-Ramann-Strasse 6</deliveryPoint>
+        <city>Freising</city>
+        <administrativeArea>Bayern</administrativeArea>
+        <postalCode>85354</postalCode>
+        <country>Germany</country>
+      </address>
+      <phone>0049-152-56391781</phone>
+      <electronicMailAddress>markusbauer@mailbox.org</electronicMailAddress>
+    </contact>
+  </dataset>
+</eml:eml>
