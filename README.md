@@ -40,4 +40,4 @@ Contact markus1.bauer@tum.de for any further information.
 
 **Citation:**
 
-> Bauer, M., Harzer, R., Strobl, K. & Kollmann, J. (2018). Resilience of riparian vegetation after restoration measures on River Inn. _River Research and Applications_ 34, 451-460. https://doi.org/10.1002/rra.3255
+> Bauer M, Harzer R, Strobl K, Kollmann J (2018). Resilience of riparian vegetation after restoration measures on River Inn. _River Research and Applications_ 34, 451-460. https://doi.org/10.1002/rra.3255
