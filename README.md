@@ -1,7 +1,7 @@
 # Resilience of riparian vegetation after restoration measures on River Inn
 
-_Markus Bauer, Romy Harzer, Katharina Strobl and Johannes Kollmann_  
-    
+_Markus Bauer <a href="https://orcid.org/0000-0001-5372-4174"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height = "16"></a>, Romy Harzer <a href="https://orcid.org/0000-0001-9186-5349"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height = "16"></a>, Katharina Strobl <a href="https://orcid.org/0000-0002-2380-201X"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height = "16"></a> and Johannes Kollmann <a href="https://orcid.org/0000-0002-4990-3636"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height = "16"></a>_  
+
 ***
 
 **Journal**: [River Research and Applications](https://onlinelibrary.wiley.com/journal/15351467)
