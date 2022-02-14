@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="f755fc7c-8fff-4677-a462-686226b86972" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="6d30df56-728e-4f5d-a2a8-9f50487c1122" system="uuid" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
   <dataset>
     <title>Resilience of riparian vegetation after restoration measures on River Inn</title>
     <creator>
@@ -11,23 +11,7 @@
     </creator>
     <pubDate>2018</pubDate>
     <language>English</language>
-    <abstract>River restoration is widely applied, although its effects are poorly understood, and degraded hab-
-itats might be difficult to improve. Moreover, there is a lack of monitoring as well as few system-
-atic comparisons of restoration methods. This study presents results of a 4 - year monitoring on
-River Inn (southern Germany) investigating restoration by gravel or sand addition or embankment
-removal. The results were compared with reference sites that represent the pre - restoration
-conditions. At the landscape scale, we analysed vegetation types based on aerial photographs,
-whereas at a smaller scale, we undertook vegetation surveys and evaluated species composition,
-growth, and life form, as well as the proportion of the target vegetation. After 4 years, the data
-indicated a 'negative resilience' of the vegetation back to the state prior to restoration. The struc-
-tural analysis revealed an extensive spread of reed at expense of bare soil. Thus, the species com-
-position largely regressed to the pre - restoration conditions, and neither annuals nor other
-pioneer species showed a long - term benefit of river restoration. There were differences among
-the three restoration treatments after 2 years, but no longer after 4 years. However, the river res-
-toration had three positive outcomes: (a) There was a temporary benefit for pioneer vegetation
-that most likely replenished the seed bank of the respective species, (b) the valuable reed commu-
-nities showed resilience, and (c) the measures allowed some practical learning as expected for
-adaptive restoration.</abstract>
+    <abstract>Empty</abstract>
     <keywordSet>
       <keyword>rivers</keyword>
       <keyword>monitoring</keyword>
