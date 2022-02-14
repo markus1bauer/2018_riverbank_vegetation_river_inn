@@ -100,5 +100,5 @@ ggplot(pdata, aes(year, herbHeight, shape = year, ymin = conf.low, ymax = conf.h
 ### Save ###
 ggsave("figure_vegHeight_800dpi_12x8.5cm.tiff",
   dpi = 800, width = 12, height = 8.5, units = "cm",
-  path = here("ouputs", "figures")
+  path = here("outputs", "figures")
 )
