@@ -1,18 +1,16 @@
-﻿Variable,Definition,Source,Unit,Type,Values,"Comment	"
-name,botanical name,The Plant List,na,text,na,na
-descriptor,descriptor of the species,na,na,text,na,na
-abb,abbreviation of species name,na,na,text,na,na
-family,plant family,Rothmaler (2011),na,text,na,na
-lifeform,lifeform following Raunkjaer,Ellenberg et al. 2001,na,text,H = Hemicryptohyte; T = Therophyte; P = Phanerophyte; N = Rest,Nanonphanerophytes were defined as P and Thp as T
-growthform,growth form,Rothmaler (2011),na,text,na,na
-l,Ellenberg L value,Ellenberg et al. 2001,na,float,na,na
-t,Ellenberg T value,Ellenberg et al. 2001,na,float,na,na
-k,Ellenberg K value,Ellenberg et al. 2001,na,float,na,na
-f,Ellenberg F value,Ellenberg et al. 2001,na,float,na,na
-r,Ellenberg R value,Ellenberg et al. 2001,na,float,na,na
-n,Ellenberg N value,Ellenberg et al. 2001,na,float,na,na
-sociology,plant sociology abbreviation,Ellenberg et al. 2001,na,float,na,na
-typ,typical species for certain habitat types,na,na,text,na,"see file ""data_raw_target_vegetation"""
-rlg,red list of Germany,Ludwig & Schnittler (1996),na,text,* = unthreated; V = early warning list,na
-rlb,red list of Bavaria,Bavarian ministry for environment 2005,na,text,na,na
-neo,neophytes,Nehring et al. (2013),na,float,"1 = yes, 0 = no",na
+﻿Variable,Definition,Unit,Type,Values,"Comment	"
+name,botanical name,na,character,na,na
+descriptor,descriptor of the species,na,character,na,na
+family,plant family,na,character,na,Jäger E (2011) Rothmaler - Exkursionsflora von Deutschland. Gefaesspflanzen: Grundband. Springer Spektrum: Berlin Heidelberg. ISBN 978-3-8274-1606-3 
+lifeform,lifeform following Raunkjaer,na,factor,H = Hemicryptohyte / T = Therophyte / P = Phanerophyte / N = Rest,Nanonphanerophytes were defined as P and Thp as T / Ellenbeg H (2001) Zeigerwerte von Pflanzen in Mitteleuropa. 3rd ed. Scripta geobotanica 18: 9-166. ISBN 3884525182
+growthform,growth form,na,factor,na,Jäger E (2011) Rothmaler - Exkursionsflora von Deutschland. Gefaesspflanzen: Grundband. Springer Spektrum: Berlin Heidelberg. ISBN 978-3-8274-1606-3 
+l,Ellenberg L value,dimensionless,numeric,na,Ellenbeg H (2001) Zeigerwerte von Pflanzen in Mitteleuropa. 3rd ed. Scripta geobotanica 18: 9-166. ISBN 3884525182
+t,Ellenberg T value,dimensionless,numeric,na,Ellenbeg H (2001) Zeigerwerte von Pflanzen in Mitteleuropa. 3rd ed. Scripta geobotanica 18: 9-166. ISBN 3884525182
+k,Ellenberg K value,dimensionless,numeric,na,Ellenbeg H (2001) Zeigerwerte von Pflanzen in Mitteleuropa. 3rd ed. Scripta geobotanica 18: 9-166. ISBN 3884525182
+f,Ellenberg F value,dimensionless,numeric,na,Ellenbeg H (2001) Zeigerwerte von Pflanzen in Mitteleuropa. 3rd ed. Scripta geobotanica 18: 9-166. ISBN 3884525182
+r,Ellenberg R value,dimensionless,numeric,na,Ellenbeg H (2001) Zeigerwerte von Pflanzen in Mitteleuropa. 3rd ed. Scripta geobotanica 18: 9-166. ISBN 3884525182
+n,Ellenberg N value,dimensionless,numeric,na,Ellenbeg H (2001) Zeigerwerte von Pflanzen in Mitteleuropa. 3rd ed. Scripta geobotanica 18: 9-166. ISBN 3884525182
+sociology,plant sociology abbreviation,dimensionless,numeric,na,Ellenbeg H (2001) Zeigerwerte von Pflanzen in Mitteleuropa. 3rd ed. Scripta geobotanica 18: 9-166. ISBN 3884525182
+rlg,red list of Germany,na,factor,* = unthreated / V = early warning list,"BfN (Bundesamt fuer Naturschutz) (2018) Rote Liste gefährdeter Tiere, Pflanzen und Pilze Deutschlands. Band 7: Pflanzen. ISBN 978-3-7843-5612-9"
+rlb,red list of Bavaria,na,factor,na,"StMUGV (Bayerisches Staatsministerium für Umwelt, Gesundheit und Verbraucherschutz) (2005) Rote Liste der gefährdeten Tiere und Gefäßpflanzen Bayerns. Kurzfassung."
+neo,neophytes,na,factor,1 = yes / 0 = no,Nehring S / Kowarik I / Rabitsch W / Essl F (Eds.) (2013) Naturschutzfachliche Invasivitätsbewertungen für in Deutschland wild lebende gebietsfremde Gefäßpflanzen. BfN-Skripten 352. ISBN 978-3-89624-087-3

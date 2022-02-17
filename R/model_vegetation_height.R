@@ -27,25 +27,22 @@ sites <- read_csv("data_processed_sites.csv",
   col_names = TRUE, na = "na",
   col_types =
     cols(
-      .default = col_double(),
-      plotTemp = col_factor(),
-      plot = col_factor(),
-      block = col_factor(),
+      .default = "?",
       year = col_factor(levels = c("Control", "2014", "2016")),
       treatment = col_factor(levels = c(
         "Gravel supply",
         "Sand supply",
         "Embankment removal"
       )),
-      habitatType = col_factor(),
-      substrate = col_factor()
+      barrier_distance = "d"
     )
 ) %>%
   select(
     no, plotTemp, plot, block, year, barrier_distance, treatment,
-    habitatType, herbHeight
+    herbHeight
   ) %>%
-  subset(herbHeight > 0)
+  subset(herbHeight > 0) %>%
+  rename(y = herbHeight)
 
 
 
@@ -58,50 +55,47 @@ sites <- read_csv("data_processed_sites.csv",
 
 #### a Graphs ---------------------------------------------------------------
 # simple effects:
-plot(herbHeight ~ treatment, sites)
-plot(herbHeight ~ habitatType, sites)
-plot(herbHeight ~ barrierDist, sites)
-plot(herbHeight ~ year, sites)
-plot(herbHeight ~ block, sites)
+plot(y ~ treatment, sites)
+plot(y ~ barrierDist, sites)
+plot(y ~ year, sites)
+plot(y ~ block, sites)
 # 2way (treatment:year):
-ggplot(sites, aes(treatment, herbHeight, color = year)) +
+ggplot(sites, aes(treatment, y, color = year)) +
   geom_boxplot() +
   geom_quasirandom(dodge.width = .7, groupOnX = TRUE)
 # 2way (treatment:barrierDist):
-ggplot(sites, aes(barrier_distance, herbHeight, color = treatment)) +
+ggplot(sites, aes(barrier_distance, y, color = treatment)) +
   geom_smooth() +
   geom_quasirandom(dodge.width = .7, groupOnX = TRUE)
 # interactions with block:
-ggplot(sites, aes(block, herbHeight, color = treatment)) +
+ggplot(sites, aes(block, y, color = treatment)) +
   geom_boxplot() +
   geom_quasirandom(dodge.width = .7, groupOnX = TRUE)
-ggplot(sites, aes(block, herbHeight, color = year)) +
+ggplot(sites, aes(block, y, color = year)) +
   geom_boxplot() +
   geom_quasirandom(dodge.width = .7, groupOnX = TRUE)
 
 ##### b Outliers, zero-inflation, transformations? --------------------------
-dotchart((sites$herbHeight),
+dotchart((sites$y),
   groups = factor(sites$treatment),
   main = "Cleveland dotplot"
 )
-dotchart((sites$herbHeight),
+dotchart((sites$y),
   groups = factor(sites$year),
   main = "Cleveland dotplot"
 )
-dotchart((sites$herbHeight),
+dotchart((sites$y),
   groups = factor(sites$block),
   main = "Cleveland dotplot"
 )
-par(mfrow = c(1, 1))
-boxplot(sites$herbHeight)
-par(mfrow = c(2, 2))
-plot(table((sites$herbHeight)),
+boxplot(sites$y)
+plot(table((sites$y)),
   type = "h",
   xlab = "Observed values", ylab = "Frequency"
 )
-ggplot(sites, aes(herbHeight)) +
+ggplot(sites, aes(y)) +
   geom_density()
-ggplot(sites, aes(sqrt(herbHeight))) +
+ggplot(sites, aes(sqrt(y))) +
   geom_density()
 
 
@@ -109,20 +103,20 @@ ggplot(sites, aes(sqrt(herbHeight))) +
 
 #### a models ---------------------------------------------------------------
 # random structure
-m1 <- lmer(herbHeight ~ treatment * year + (1 | block / plotTemp), sites, REML = FALSE)
+m1 <- lmer(y ~ treatment * year + (1 | block / plotTemp), sites, REML = FALSE)
 VarCorr(m1)
 # 3w-model
-m2 <- lmer(log(herbHeight) ~ treatment * year * barrier_distance +
+m2 <- lmer(log(y) ~ treatment * year * barrier_distance +
   (1 | block / plotTemp), sites, REML = FALSE)
 isSingular(m2)
 simulateResiduals(m2, plot = TRUE)
 # 2w-model
-m3 <- lmer(log(herbHeight) ~ treatment * year +
+m3 <- lmer(log(y) ~ treatment * year +
   (1 | block / plotTemp), sites, REML = FALSE)
 isSingular(m3)
 simulateResiduals(m3, plot = TRUE)
 # 2w-model without plotTemp
-m4 <- lmer(log(herbHeight) ~ treatment * year +
+m4 <- lmer(log(y) ~ treatment * year +
   (1 | block), sites, REML = FALSE)
 isSingular(m4)
 simulateResiduals(m4, plot = TRUE)
@@ -157,11 +151,11 @@ contrast(emmeans(m4, ~ year | treatment, type = "response"), "trt.vs.ctrl", ref 
 
 ### Kontrolle vs. 2016 -----------------------------------------------------
 data <- sites[!(sites$year == "2014"), ]
-kruskal.test(data$herbHeight, data$treatment)
-pgirmess::kruskalmc(data$herbHeight ~ data$treatment)
+kruskal.test(data$y, data$treatment)
+pgirmess::kruskalmc(data$y ~ data$treatment)
 
 ### 2014 vs. 2016 ----------------------------------------------------------
 data <- sites[!(sites$year == "Control"), ]
-m <- lmer(sqrt(herbHeight + 60) ~ treatment * year +
+m <- lmer(sqrt(y + 60) ~ treatment * year +
   (1 | block), data, REML = FALSE)
 car::Anova(m)

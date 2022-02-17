@@ -26,30 +26,28 @@ sites <- read_csv("data_processed_sites.csv",
   col_names = TRUE, na = "na",
   col_types =
     cols(
-      .default = col_double(),
-      plotTemp = col_factor(),
-      plot = col_factor(),
-      block = col_factor(),
+      .default = "?",
       year = col_factor(levels = c("Control", "2014", "2016")),
       treatment = col_factor(levels = c(
         "Gravel supply",
         "Sand supply",
         "Embankment removal"
       )),
-      habitatType = col_factor(),
-      substrate = col_factor()
+      barrier_distance = "d"
     )
 ) %>%
-  select(
-    plotTemp, conf.low, conf.high, plot, block, year,
-    barrier_distance, treatment, therophytes, perennials, wood
-  ) %>%
   gather("lifeform", "n", c("therophytes", "perennials", "wood")) %>%
-  mutate(lifeform = factor(lifeform, levels = c(
-    "therophytes",
-    "perennials",
-    "wood"
-  )))
+  mutate(
+    lifeform = factor(
+      lifeform, levels = c("therophytes", "perennials","wood")
+      ),
+    lifeform = fct_recode(
+      lifeform,
+      "Therophytes" = "therophytes",
+      "Perennials" = "perennials",
+      "Wood" = "wood"
+      )
+    )
 
 #### Chosen model ###
 m2 <- glmer((n) ~ treatment * year * lifeform +
@@ -66,6 +64,7 @@ theme_mb <- function() {
   theme(
     panel.background = element_rect(fill = "white"),
     text = element_text(size = 10, color = "black"),
+    axis.text.x = element_text(angle = 10),
     axis.line.y = element_line(),
     axis.line.x = element_blank(),
     axis.ticks.x = element_blank(),
@@ -78,7 +77,7 @@ theme_mb <- function() {
 
 ### interaction: lifeform:year:treatment ###
 pd <- position_dodge(.6)
-ggplot(sites, aes(year, n, fill = treatment, ymin = conf.low, ymax = conf.high)) +
+ggplot(sites, aes(treatment, n, fill = year, ymin = conf.low, ymax = conf.high)) +
   geom_boxplot(position = pd, width = 0.5, color = "black") +
   facet_grid(~lifeform) +
   scale_y_continuous(limits = c(0, 17), breaks = seq(-100, 300, 5)) +
@@ -87,7 +86,8 @@ ggplot(sites, aes(year, n, fill = treatment, ymin = conf.low, ymax = conf.high))
   theme_mb()
 
 ### Save ###
-ggsave("figure_lifeform_no_800dpi_16x8.5cm.tiff",
-  dpi = 800, width = 16, height = 8.5, units = "cm",
-  path = here("ouputs", "figures")
-)
+ggsave(
+  "figure_5_lifeform_800dpi_16x10cm.tiff",
+  dpi = 800, width = 16, height = 10, units = "cm",
+  path = here("outputs", "figures")
+  )

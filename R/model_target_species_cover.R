@@ -27,26 +27,23 @@ sites <- read_csv("data_processed_sites.csv",
   col_names = TRUE, na = "na",
   col_types =
     cols(
-      .default = col_double(),
-      plotTemp = col_factor(),
-      plot = col_factor(),
-      block = col_factor(),
+      .default = "?",
       year = col_factor(levels = c("Control", "2014", "2016")),
       treatment = col_factor(levels = c(
         "Gravel supply",
         "Sand supply",
         "Embankment removal"
       )),
-      habitatType = col_factor(),
-      substrate = col_factor()
+      barrier_distance = "d"
     )
-) %>%
-  select(
-    aimCover, plotTemp, plot, block, year, barrier_distance, treatment,
-    gravelCover, sandCover, reedCover
   ) %>%
-  gather("aimType", "aimCover", c("gravelCover", "sandCover", "reedCover")) %>%
-  mutate(aimType = factor(aimType, levels = c("gravelCover", "sandCover", "reedCover")))
+  gather("aimType", "aim_cover",
+         c("gravel_cover", "sand_cover", "reed_cover")) %>%
+  mutate(aimType = factor(aimType,
+                          levels = c("gravel_cover",
+                                     "sand_cover",
+                                     "reed_cover")),
+         y = aim_cover)
 
 
 
@@ -59,60 +56,58 @@ sites <- read_csv("data_processed_sites.csv",
 
 #### a Graphs ---------------------------------------------------------------
 # simple effects:
-par(mfrow = c(2, 2))
-plot(aimCover ~ treatment, sites)
-plot(aimCover ~ aimType, sites)
-plot(aimCover ~ barrier_distance, sites)
-plot(aimCover ~ year, sites)
-plot(aimCover ~ block, sites)
+plot(y ~ treatment, sites)
+plot(y ~ aimType, sites)
+plot(y ~ barrier_distance, sites)
+plot(y ~ year, sites)
+plot(y ~ block, sites)
 # 2way (aimType:year):
-ggplot(sites, aes(aimType, aimCover, color = year)) +
+ggplot(sites, aes(aimType, y, color = year)) +
   geom_boxplot() +
   geom_quasirandom(dodge.width = .7, groupOnX = TRUE)
 # 2way (aimType:treatment):
-ggplot(sites, aes(aimType, aimCover, color = treatment)) +
+ggplot(sites, aes(aimType, y, color = treatment)) +
   geom_boxplot() +
   geom_quasirandom(dodge.width = .7, groupOnX = TRUE)
 # 3way (aimType:treatment:year):
-ggplot(sites, aes(year, aimCover, color = treatment)) +
+ggplot(sites, aes(year, y, color = treatment)) +
   geom_boxplot() +
   geom_quasirandom(dodge.width = .7, groupOnX = TRUE) +
   facet_wrap(~aimType)
 # interactions with block:
-ggplot(sites, aes(block, aimCover, color = aimType)) +
+ggplot(sites, aes(block, y, color = aimType)) +
   geom_boxplot() +
   geom_quasirandom(dodge.width = .7, groupOnX = TRUE)
-ggplot(sites, aes(block, aimCover, color = treatment)) +
+ggplot(sites, aes(block, y, color = treatment)) +
   geom_boxplot() +
   geom_quasirandom(dodge.width = .7, groupOnX = TRUE)
-ggplot(sites, aes(block, aimCover, color = year)) +
+ggplot(sites, aes(block, y, color = year)) +
   geom_boxplot() +
   geom_quasirandom(dodge.width = .7, groupOnX = TRUE)
 
 ##### b Outliers, zero-inflation, transformations? --------------------------
-par(mfrow = c(2, 2))
-dotchart((sites$aimCover),
+dotchart((sites$y),
   groups = factor(sites$treatment),
   main = "Cleveland dotplot"
 )
-dotchart((sites$aimCover),
+dotchart((sites$y),
   groups = factor(sites$year),
   main = "Cleveland dotplot"
 )
-dotchart((sites$aimCover),
+dotchart((sites$y),
   groups = factor(sites$block),
   main = "Cleveland dotplot"
 )
 par(mfrow = c(1, 1))
-boxplot(sites$aimCover)
+boxplot(sites$y)
 par(mfrow = c(2, 2))
-plot(table((sites$aimCover)),
+plot(table((sites$y)),
   type = "h",
   xlab = "Observed values", ylab = "Frequency"
 )
-ggplot(sites, aes(aimCover)) +
+ggplot(sites, aes(y)) +
   geom_density()
-ggplot(sites, aes(log(aimCover))) +
+ggplot(sites, aes(log(y))) +
   geom_density()
 
 
@@ -120,15 +115,15 @@ ggplot(sites, aes(log(aimCover))) +
 
 ### Kontrolle vs. 2016 -----------------------------------------------------
 data <- sites[!(sites$year == "2014"), ]
-m1 <- lmer(sqrt(aimCover + 175) ~ aimType * year +
+m1 <- lmer(sqrt(y + 175) ~ aimType * year +
   (1 | block), data, REML = FALSE)
 car::Anova(m1)
 
 ### 2014 vs. 2016 ----------------------------------------------------------
 data <- sites[!(sites$year == "Control"), ]
-m2 <- lmer(log2(aimCover + 2) ~ aimType * year +
+m2 <- lmer(log2(y + 2) ~ aimType * year +
   (1 | block), data, REML = FALSE)
 car::Anova(m2)
-m3 <- lmer(log2(aimCover + 2) ~ aimType * treatment +
+m3 <- lmer(log2(y + 2) ~ aimType * treatment +
   (1 | block), data, REML = FALSE)
 car::Anova(m3)

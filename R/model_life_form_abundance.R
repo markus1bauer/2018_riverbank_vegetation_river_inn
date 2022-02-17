@@ -27,7 +27,7 @@ sites <- read_csv("data_processed_sites.csv",
   col_names = TRUE, na = "na",
   col_types =
     cols(
-      .default = col_double(),
+      .default = "?",
       plotTemp = col_factor(),
       plot = col_factor(),
       block = col_factor(),
@@ -36,9 +36,7 @@ sites <- read_csv("data_processed_sites.csv",
         "Gravel supply",
         "Sand supply",
         "Embankment removal"
-      )),
-      habitatType = col_factor(),
-      substrate = col_factor()
+      ))
     )
 ) %>%
   select(

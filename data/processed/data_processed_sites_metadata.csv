@@ -1,25 +1,25 @@
 ﻿Variable,Definition,Source,Unit,Type,Values,"Comment	"
-no,serial number,na,na,float,na,na
-plot,plot ID,na,na,text,na,block ID + plot Number
-block,block ID,na,na,text,na,na
-year,year of observation,na,na,text,Control = negative reference observed in 2014,na
-treatment,restoration measurement,na,na,text,na,treatment for control sites is hypothetical
-habitatType,category of habitat type,na,na,text,na,na
-shrubHeight,na,na,cm,float,na,na
-shrubCover,na,na,%,float,na,na
-herbHeight,na,na,cm,float,na,na
-herbCover,na,na,%,float,na,na
-mossCover,na,na,%,float,na,na
-soilCover,na,na,%,float,na,na
-substrate,type of the substrate,na,na,text,na,na
-barrierDist,Distance of the plot to the next barrier downstream,na,km,float,na,na
-shannon,Shannon Index,na,na,float,na,na
-simpson,Simpson Index,na,na,float,na,na
-speciesRich,species richness,na,na,float,na,na
-therophytes,number of therophytes,na,#,float,na,na
-perennials,number of perennial species,na,#,float,na,na
-wood,number of woody species,na,#,float,na,na
-reedCover,summed cover of non-target species growing in reed,na,%,float,na,see file data_raw_target_vegetation
-sandCover,cover of target species growing on sand,na,%,float,na,see file data_raw_target_vegetation
-gravelCover,cover of target species growing on gravel,na,%,float,na,see file data_raw_target_vegetation
-aimCover,"sum of reedCover, sandCover, and gravelCover",na,%,float,na,na
+no,serial number,na,na,numeric,na,na
+plot,plot ID,na,na,character,na,block ID + plot Number
+block,block ID,na,na,character,na,na
+year,year of observation,na,na,factor,Control = negative reference observed in 2014 / 2014 / 2016,na
+treatment,restoration measurement,na,na,factor,Embankment removal / Gravel supply / Sand supply,treatment for control sites is hypothetical
+habitatType,category of habitat type,na,na,character,na,na
+shrubHeight,na,na,centimeter,numeric,na,na
+shrubCover,na,na,percent,numeric,na,na
+herbHeight,na,na,cm,numeric,na,na
+herbCover,na,na,percent,numeric,na,na
+mossCover,na,na,percent,numeric,na,na
+soilCover,na,na,percent,numeric,na,na
+substrate,type of the substrate,na,na,character,na,na
+barrierDist,Distance of the plot to the next barrier downstream,na,kilometer,numeric,na,na
+shannon,Shannon Index,na,na,numeric,na,na
+simpson,Simpson Index,na,na,numeric,na,na
+speciesRich,species richness,na,na,numeric,na,na
+therophytes,number of therophytes,na,na,numeric,na,na
+perennials,number of perennial species,na,na,numeric,na,na
+wood,number of woody species,na,na,numeric,na,na
+reedCover,summed cover of non-target species growing in reed,na,percent,numeric,na,see file data_raw_target_vegetation
+sandCover,cover of target species growing on sand,na,percent,numeric,na,see file data_raw_target_vegetation
+gravelCover,cover of target species growing on gravel,na,percent,numeric,na,see file data_raw_target_vegetation
+aimCover,"sum of reedCover, sandCover, and gravelCover",na,percent,numeric,na,na

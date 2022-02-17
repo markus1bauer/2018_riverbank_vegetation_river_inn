@@ -20,48 +20,50 @@ setwd(here("data", "processed"))
 
 ### Load data ###
 sites <- read_csv("data_processed_sites.csv",
-  col_names = TRUE, na = "na",
-  col_types =
-    cols(
-      .default = col_double(),
-      plotTemp = col_factor(),
-      plot = col_factor(),
-      block = col_factor(),
-      year = col_factor(levels = c("Control", "2014", "2016")),
-      treatment = col_factor(levels = c(
-        "Gravel supply",
-        "Sand supply",
-        "Embankment removal"
-      )),
-      habitatType = col_factor(),
-      substrate = col_factor()
-    )
+                  col_names = TRUE, na = "na",
+                  col_types =
+                    cols(
+                      .default = "?",
+                      year = col_factor(levels = c("Control", "2014", "2016")),
+                      treatment = col_factor(levels = c(
+                        "Gravel supply",
+                        "Sand supply",
+                        "Embankment removal"
+                      )),
+                      barrier_distance = "d"
+                    )
 ) %>%
-  select(
-    no, plotTemp, plot, block, year, barrier_distance, treatment, habitatType,
-    herbHeight, herbCover, soilCover, speciesrichness, shannon
-  ) %>%
   filter(treatment != "Embankment removal" & no != "83")
 
-species <- read_csv("data_processed_species.csv",
-  col_names = TRUE, na = "na",
-  col_types =
-    cols(
-      .default = col_double(),
-      name = col_factor(),
-      abb = col_factor()
-    )
+traits <- read_csv("data_processed_traits.csv",
+                   col_names = TRUE, na = "na",
+                   col_types =
+                     cols(
+                       .default = "?"
+                     )
 ) %>%
-  select(-name) %>%
-  column_to_rownames("abb")
+  select(name, abb)
+
+species <- read_csv("data_processed_species.csv",
+                    col_names = TRUE, na = "na",
+                    col_types =
+                      cols(
+                        .default = col_double(),
+                        name = col_factor()
+                      )
+) %>%
+  left_join(traits, by = "name") %>%
+  column_to_rownames("abb") %>%
+  select(-name)
 species <- species[, c(16:45, 61:90, 106:135)]
 species <- species[rowSums(species) > 0, colSums(species) > 0]
-species <- as_tibble(t(species))
+species <- species %>%
+  t() %>%
+  as_tibble()
+
 
 #### Chosen model ###
-dist <- wisconsin(sqrt(species))
-dist <- vegdist(species, method = "bray", binary = FALSE, na.rm = TRUE)
-(ordi <- metaMDS(dist, try = 99, previous.best = TRUE, na.rm = TRUE))
+(ordi <- metaMDS(species, try = 99, previous.best = TRUE, na.rm = TRUE))
 
 #### b environmental factors ----------------------------------------------------------------------
 ef <- envfit(ordi ~ herbHeight + soilCover + barrier_distance,
@@ -134,7 +136,7 @@ ggplot() +
     arrow = arrow(length = unit(0.2, "cm")), color = "black"
   ) +
   annotate("text", x = data.ef$NMDS1, y = data.ef$NMDS2, label = data.ef$variables) +
-  annotate("text", x = -.4, y = .4, label = "2D stress = 0.19") +
+  annotate("text", x = -.5, y = 1.8, label = "2D stress = 0.19") +
   scale_colour_grey() +
   coord_equal() +
   guides(
@@ -144,7 +146,7 @@ ggplot() +
   theme_mb()
 
 ### Save ###
-ggsave("figure_ordination_800dpi_16x10cm.tiff",
+ggsave("figure_4_ordination_800dpi_16x10cm.tiff",
   dpi = 800, width = 16, height = 10, units = "cm",
-  path = here("ouputs", "figures")
+  path = here("outputs", "figures")
 )

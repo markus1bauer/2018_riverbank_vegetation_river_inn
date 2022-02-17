@@ -23,22 +23,27 @@ sites <- read_csv("data_processed_sites.csv",
   col_names = TRUE, na = "na",
   col_types =
     cols(
-      .default = col_double(),
-      plotTemp = col_factor(),
-      plot = col_factor(),
-      block = col_factor(),
+      .default = "?",
       year = col_factor(levels = c("Control", "2014", "2016")),
-      treatment = col_factor(levels = c("Gravel supply", "Sand supply", "Embankment removal")),
-      habitatType = col_factor(),
-      substrate = col_factor()
-    )
-) %>%
-  select(
-    plotTemp, plot, conf.low, conf.high, block, year, barrier_distance, treatment,
-    gravel_cover, sand_cover, reed_cover
+      treatment = col_factor(levels = c(
+        "Gravel supply",
+        "Sand supply",
+        "Embankment removal")),
+      barrier_distance = "d"
+      )
   ) %>%
-  pivot_longer(names_to = "aimType", values_to = "aim_cover", cols = c("gravel_cover", "sand_cover", "reed_cover")) %>%
-  mutate(aimType = factor(aimType, levels = c("gravel_cover", "sand_cover", "reed_cover")))
+  pivot_longer(names_to = "aimType", values_to = "aim_cover",
+               cols = c("gravel_cover", "sand_cover", "reed_cover")) %>%
+  mutate(aimType = factor(aimType,
+                          levels = c("gravel_cover", "sand_cover", "reed_cover")
+                          ),
+         aimType = fct_recode(
+           aimType,
+           "Gravel vegetation" = "gravel_cover",
+           "Sand vegetation" = "sand_cover",
+           "Reed" = "reed_cover"
+           )
+         )
 
 
 
@@ -51,6 +56,7 @@ theme_mb <- function() {
   theme(
     panel.background = element_rect(fill = "white"),
     text = element_text(size = 10, color = "black"),
+    axis.text.x = element_text(angle = 10),
     axis.line.y = element_line(),
     axis.line.x = element_blank(),
     axis.ticks.x = element_blank(),
@@ -62,12 +68,8 @@ theme_mb <- function() {
 }
 
 ### interaction: aimType:year:treatment ###
-sites$aimType <- recode_factor(sites$aimType,
-  gravelCover = "Gravel vegetation",
-  sandCover = "Sand vegetation", reedCover = "Reed"
-)
 pd <- position_dodge(.6)
-ggplot(sites, aes(year, aim_cover, fill = treatment, ymin = conf.low, ymax = conf.high)) +
+ggplot(sites, aes(treatment, aim_cover, fill = year, ymin = conf.low, ymax = conf.high)) +
   geom_boxplot(position = pd, width = 0.5, color = "black") +
   facet_grid(~aimType) +
   scale_y_continuous(limits = c(0, 150), breaks = seq(-100, 300, 20)) +
@@ -76,7 +78,7 @@ ggplot(sites, aes(year, aim_cover, fill = treatment, ymin = conf.low, ymax = con
   theme_mb()
 
 ### Save ###
-ggsave("figure_target_cover_800dpi_16x8.5cm.tiff",
-  dpi = 800, width = 16, height = 8.5, units = "cm",
-  path = here("ouputs", "figures")
+ggsave("figure_6_target_cover_800dpi_16x10cm.tiff",
+  dpi = 800, width = 16, height = 10, units = "cm",
+  path = here("outputs", "figures")
 )

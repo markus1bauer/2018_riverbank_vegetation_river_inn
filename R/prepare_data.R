@@ -8,9 +8,7 @@
 ### Packages ###
 library(here)
 library(tidyverse)
-library(WorldFlora)
 library(vegan)
-library(styler)
 
 ### Start ###
 # installr::updateR(browse_news = FALSE, install_R = TRUE, copy_packages = TRUE, copy_Rprofile.site = TRUE, keep_old_packages = TRUE, update_packages = TRUE, start_new_R = FALSE, quit_R = TRUE)
@@ -30,35 +28,24 @@ sites <- read_csv("data_raw_sites.csv",
   col_names = TRUE, na = "na",
   col_types =
     cols(
-      .default = col_double(),
-      plotTemp = col_factor(),
-      plot = col_factor(),
-      block = col_factor(),
+      .default = "?",
       year = col_factor(levels = c("Control", "2014", "2016")),
-      site = col_factor(),
-      date = col_date(),
-      barrier = col_factor(),
-      treatment = col_factor(levels = c(
-        "Gravel supply", "Sand supply",
-        "Embankment removal"
-      )),
-      habitatType = col_factor(),
-      substrate = col_factor(),
-      slope = col_factor()
-    )
-) %>%
-  select(
-    no, plotTemp, plot, block, year, barrierriverKm, plotriverKm, treatment, habitatType,
-    shrubHeight, shrubCover, herbHeight, herbCover, mossCover, soilCover, substrate
-  )
+      treatment = col_factor(
+        levels = c(
+          "Gravel supply",
+          "Sand supply",
+          "Embankment removal"
+          )
+        )
+      )
+)
 
 species <- read_csv("data_raw_species.csv",
   col_names = TRUE, na = "na",
   col_types =
     cols(
-      .default = col_double(),
-      name = col_factor(),
-      abb = col_factor()
+      .default = "d",
+      name = "f"
     )
 )
 
@@ -66,21 +53,11 @@ traits <- read_csv("data_raw_traits.csv",
   col_names = TRUE, na = "na",
   col_types =
     cols(
-      .default = col_double(),
-      name = col_factor(),
-      descriptor = col_factor(),
-      abb = col_factor(),
-      family = col_factor(),
-      lifeform = col_factor(),
-      growthform = col_factor(),
-      sociology = col_factor(),
-      typ = col_factor(),
-      rlg = col_factor(),
-      rlb = col_factor(),
-      neo = col_factor()
+      .default = "?",
+      sociology = "d"
     )
-) %>%
-  select(name, abb, lifeform, growthform, n, f, typ, neo)
+) 
+
 
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -95,15 +72,52 @@ sites <- sites %>%
     conf.low = seq_along(plot),
     conf.high = seq_along(plot),
     barrier_distance = plotriverKm - barrierriverKm
+  )
+
+traits <- traits %>%
+  separate(name, into = c("genus", "species", "x", "subspecies"), sep = "_",
+           remove = FALSE, extra = "merge", fill = "right") %>%
+  mutate(
+    genus = str_extract(genus, "\\w{3}"),
+    species = str_extract(species, "\\w{5}"),
+    subspecies = str_extract(subspecies, "\\w{4}")
+    ) %>%
+  unite(col = "abb", genus, species, subspecies, sep = "",
+        remove = TRUE, na.rm = TRUE) %>%
+  mutate(
+    sand = if_else(
+      # Isoeto-Nanojuncetea (Zwergbinsen-Teichboden-Ges.)
+      sociology >= 3100 & sociology < 3200, "sand", if_else(
+        # Chenopodion rubri
+        sociology == 3212, "sand", if_else(
+          # Agrostietea stoloniferae (Flutrasen und Feuchtweiden)
+          sociology >= 3800 & sociology < 3900, "sand", NA_character_
+          )
+        )
+      ),
+    gravel = if_else(
+      # Epilobietalia fleischeri & Achnatheretalia
+      sociology >= 4440 & sociology < 4460, "gravel", NA_character_
+      ),
+    reed = if_else(
+      # Phragmitetea (Röhrichte und Seggenrieder)
+      sociology >= 1500 & sociology < 1600, "reed", NA_character_
+      ),
+    tall_herbal_vegetation = if_else(
+      # Calystegietalia
+      sociology >= 3520 & sociology < 3530, "tall_herbal_vegetation", NA_character_
+    )
   ) %>%
-  select(-plotriverKm, -barrierriverKm)
+  unite(
+    col = "typ", sand, gravel, reed, tall_herbal_vegetation,
+    sep = "_", remove = TRUE, na.rm = TRUE
+    )
 
 
 ### 2 Species richness ######################################################
 
 diversity <- species %>%
   column_to_rownames("name") %>%
-  select(-abb) %>%
   t()
 sites <- sites %>%
   mutate(
@@ -115,18 +129,19 @@ sites <- sites %>%
 
 ### 3 Life forms ###########################################################
 
-lifeform <- select(traits, name, lifeform)
+lifeform <- traits %>%
+  select(name, lifeform)
 therophytes <- species %>%
   inner_join(filter(lifeform, lifeform == "T" | lifeform == "H_T"), by = "name") %>%
-  select(-lifeform, -abb) %>%
+  select(-lifeform) %>%
   column_to_rownames("name")
 perennials <- species %>%
   inner_join(filter(lifeform, lifeform == "N"), by = "name") %>%
-  select(-lifeform, -abb) %>%
+  select(-lifeform) %>%
   column_to_rownames("name")
 wood <- species %>%
   inner_join(filter(lifeform, lifeform == "P"), by = "name") %>%
-  select(-lifeform, -abb) %>%
+  select(-lifeform) %>%
   column_to_rownames("name")
 sites <- sites %>%
   mutate(
@@ -138,30 +153,44 @@ sites <- sites %>%
 
 ### 4 Target species cover #################################################
 
-typ <- select(traits, name, typ)
+typ <- traits %>%
+  select(name, typ)
 reed <- species %>%
-  inner_join(filter(typ, typ == "Reed"), by = "name") %>%
-  select(-typ, -abb) %>%
+  inner_join(filter(typ, typ == "reed"), by = "name") %>%
+  select(-typ) %>%
   column_to_rownames("name")
 sand <- species %>%
-  inner_join(filter(typ, typ == "Sand"), by = "name") %>%
-  select(-typ, -abb) %>%
+  inner_join(filter(typ, typ == "sand"), by = "name") %>%
+  select(-typ) %>%
   column_to_rownames("name")
 gravel <- species %>%
-  inner_join(filter(typ, typ == "Gravel"), by = "name") %>%
-  select(-typ, -abb) %>%
+  inner_join(filter(typ, typ == "gravel"), by = "name") %>%
+  select(-typ) %>%
   column_to_rownames("name")
 sites <- sites %>%
   mutate(
     reed_cover = colSums(reed),
     sand_cover = colSums(sand),
-    gravel_cover = colSums(gravel),
-    aim_cover = reed_cover + sand_cover + gravel_cover
+    gravel_cover = colSums(gravel)
   )
 
 rm(list = setdiff(ls(), c("sites", "species", "traits")))
 
 
+### 5 Final selection of variables #################################################
+
+traits <- traits %>%
+  select(name, abb, lifeform, growthform, n, f, typ, neo)
+
+sites <- sites %>%
+  select(
+    no, plotTemp, plot, block, year, barrier_distance, treatment,
+    shrubHeight, shrubCover, herbHeight, herbCover, soilCover,
+    conf.low, conf.high,
+    speciesrichness, shannon, simpson,
+    therophytes, perennials, wood,
+    reed_cover, sand_cover, gravel_cover
+  )
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # C Save ####################################################################

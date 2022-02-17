@@ -1,15 +1,14 @@
 ﻿Abbreviation,Long_form,Source,Unit_levels,"Comment	"
-site,site at River Inn,,,
-treatment,restoration measurement for revitalisation,,,
-totalArea,toal area,GIS,m^2,
-gravelArea,area of gravel,GIS,m^2,
-sandArea,area of sand,GIS,m^2,
-reedArea,area of reed,GIS,m^2,
-tallherbalvegetationArea,area of tall herbal vegetation,GIS,m^2,
-gravelRatio,ratio of total area of gravel area,,,
-sandRatio,ratio of total area of sand area,,,
-reedRatio,ratio of total area of reed area,,,
-tallherbalvegetationRatio,ratio of total area of tall herbal vegetation area,,,
-,,,,
-2014 and 2016,year of survey,,,
-change,Difference from 2014 to 2016,,,
+site,site at River Inn,na,na,na
+treatment,restoration measurement for revitalisation,na,na,na
+totalArea,toal area,GIS,meterSquared,na
+gravelArea,area of gravel,GIS,meterSquared,na
+sandArea,area of sand,GIS,meterSquared,na
+reedArea,area of reed,GIS,meterSquared,na
+tallherbalvegetationArea,area of tall herbal vegetation,GIS,meterSquared,na
+gravelRatio,ratio of total area of gravel area,na,na,na
+sandRatio,ratio of total area of sand area,na,na,na
+reedRatio,ratio of total area of reed area,na,na,na
+tallherbalvegetationRatio,ratio of total area of tall herbal vegetation area,na,na,na
+2014 and 2016,year of survey,na,na,na
+change,Difference from 2014 to 2016,na,na,na

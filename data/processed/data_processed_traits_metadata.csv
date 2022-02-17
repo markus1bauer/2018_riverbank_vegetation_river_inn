@@ -1,8 +1,8 @@
-﻿Variable,Definition,Source,Unit,Type,Values,"Comment	"
-name,botanical name,The Plant List,na,text,na,na
-abb,abbreviation of species name,na,na,text,na,na
-lifeform,lifeform following Raunkjaer,Ellenberg et al. 2001,na,text,H = Hemicryptohyte; T = Therophyte; P = Phanerophyte; N = Rest,Nanonphanerophytes were defined as P and Thp as T
-growth,growth form,FloraWeb,na,text,na,na
-f,Ellenberg F value,Ellenberg et al. 2001,na,float,na,na
-n,Ellenberg N value,Ellenberg et al. 2001,na,float,na,na
-typ,typical species for certain habitat type,na,na,text,na,"see file ""data_raw_target_vegetation"""
+﻿Variable,Definition,Unit,Type,Values,"Comment	"
+name,botanical name,na,text,na,na
+abb,abbreviation of species name,na,text,na,na
+lifeform,lifeform following Raunkjaer,na,text,H = Hemicryptohyte; T = Therophyte; P = Phanerophyte; N = Rest,Nanonphanerophytes were defined as P and Thp as T / Ellenbeg H (2001) Zeigerwerte von Pflanzen in Mitteleuropa. 3rd ed. Scripta geobotanica 18: 9-166. ISBN 3884525182
+growth,growth form,na,text,na,na
+f,Ellenberg F value,na,float,na,Ellenbeg H (2001) Zeigerwerte von Pflanzen in Mitteleuropa. 3rd ed. Scripta geobotanica 18: 9-166. ISBN 3884525182
+n,Ellenberg N value,na,float,na,Ellenbeg H (2001) Zeigerwerte von Pflanzen in Mitteleuropa. 3rd ed. Scripta geobotanica 18: 9-166. ISBN 3884525182
+typ,typical species for certain habitat type,na,text,na,"see file ""data_raw_target_vegetation"""

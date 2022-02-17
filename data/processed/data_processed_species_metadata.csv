@@ -1,4 +1,4 @@
 ﻿Variable,Definition,Source,Unit,Type,Values,"Comment	"
-name,botanical name,The Plant List,na,text,taxonomic names,na
-abb,abbreviation of species name,na,na,text,na,na
-Numbers,Ids of plots,na,na,float,na,1-45 = Negative reference 2014; 46-90 = Restored plots in 2014; 91-135 = Restored plots in 2016
+name,botanical name,The Plant List,na,character,taxonomic names,na
+abb,abbreviation of species name,na,na,character,na,na
+Numbers,Abundance estimations of species per plot according to Braun-Blanquet (1964) and with Londo-scale (Londo 1976),na,na,numeric,na,Braun-Blanquet J (1964) Pﬂanzensoziologie: Grundzüge der Vegetationskunde (3rd ed.). Wien-New York: Springer (Original work published 1928) / Londo G (1976) The decimal scale for releves of permanent quadrats. Vegetatio 33: 61–64. http://dx.doi.org/10.1007/BF00055300

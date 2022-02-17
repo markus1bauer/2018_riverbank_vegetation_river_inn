@@ -24,40 +24,43 @@ sites <- read_csv("data_processed_sites.csv",
   col_names = TRUE, na = "na",
   col_types =
     cols(
-      .default = col_double(),
-      plotTemp = col_factor(),
-      plot = col_factor(),
-      block = col_factor(),
+      .default = "?",
       year = col_factor(levels = c("Control", "2014", "2016")),
       treatment = col_factor(levels = c(
         "Gravel supply",
         "Sand supply",
         "Embankment removal"
       )),
-      habitatType = col_factor(),
-      substrate = col_factor()
+      barrier_distance = "d"
     )
 ) %>%
-  select(
-    no, plotTemp, plot, block, year, barrier_distance, treatment, habitatType,
-    herbHeight, herbCover, soilCover, speciesRich, shannon
-  ) %>%
   filter(treatment != "Embankment removal" & no != "83")
+
+traits <- read_csv("data_processed_traits.csv",
+                   col_names = TRUE, na = "na",
+                   col_types =
+                     cols(
+                       .default = "?"
+                     )
+) %>%
+  select(name, abb)
 
 species <- read_csv("data_processed_species.csv",
   col_names = TRUE, na = "na",
   col_types =
     cols(
       .default = col_double(),
-      name = col_factor(),
-      abb = col_factor()
+      name = col_factor()
     )
 ) %>%
-  select(!(name)) %>%
-  column_to_rownames("abb")
+  left_join(traits, by = "name") %>%
+  column_to_rownames("abb") %>%
+  select(-name)
 species <- species[, c(16:45, 61:90, 106:135)]
 species <- species[rowSums(species) > 0, colSums(species) > 0]
-species <- as_tibble(t(species))
+species <- species %>%
+  t() %>%
+  as_tibble()
 
 
 
