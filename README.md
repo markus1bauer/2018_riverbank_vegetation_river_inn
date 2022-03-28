@@ -6,7 +6,7 @@ _Markus Bauer <a href="https://orcid.org/0000-0001-5372-4174"><img src="https://
 
 **Journal**: [River Research and Applications](https://onlinelibrary.wiley.com/journal/15351467)
 
-**DOI**: [10.1002/rra.3255](https://doi.org/10.1002/rra.3255)
+[![DOI](https://doi.org/10.1002/rra.3255)
 
 ## Content of the repository
 
