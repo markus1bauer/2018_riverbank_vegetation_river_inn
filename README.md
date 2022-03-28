@@ -26,23 +26,19 @@ _Markus Bauer <a href="https://orcid.org/0000-0001-5372-4174"><img src="https://
 This work is licensed under a
 [Creative Commons Attribution 4.0 International License][cc-by].
 
-[![CC BY 4.0][cc-by-image]][cc-by]
-
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
 ***
 
 When using the __data available__ in this repository, please cite the original publication and the dataset.  
 
-Contact markus1.bauer@tum.de for any further information.  
-
-**Citation:**
+**Citation**
 
 > Bauer M, Harzer R, Strobl K, Kollmann J (2018). Resilience of riparian vegetation after restoration measures on River Inn. _River Research and Applications_ 34, 451-460. https://doi.org/10.1002/rra.3255
 
-***
-**Dataset:**
+**Publication**
 
-[![DOI](https://zenodo.org/badge/321384746.svg)](https://zenodo.org/badge/latestdoi/321384746)
+> Bauer M, Harzer R, Strobl K & Kollmann J (2022) Data and code for Bauer et al. (2018) Riv Res Appl (v1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.6124931 
+
+Contact markus1.bauer@tum.de for any further information.  
