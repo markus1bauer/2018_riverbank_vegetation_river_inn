@@ -11,7 +11,6 @@ library(tidyverse)
 library(vegan)
 
 ### Start ###
-# installr::updateR(browse_news = FALSE, install_R = TRUE, copy_packages = TRUE, copy_Rprofile.site = TRUE, keep_old_packages = TRUE, update_packages = TRUE, start_new_R = FALSE, quit_R = TRUE)
 rm(list = ls())
 setwd(here("data", "raw"))
 
