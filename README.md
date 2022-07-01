@@ -7,7 +7,8 @@ _Markus Bauer <a href="https://orcid.org/0000-0001-5372-4174"><img src="https://
 **Journal**: [River Research and Applications](https://onlinelibrary.wiley.com/journal/15351467)
 
 [![DOI:10.1002/rra.3255](http://img.shields.io/badge/DOI-10.1002/rra.3255-informational.svg)](https://doi.org/10.1002/rra.3255)
-[Study region](https://www.openstreetmap.org/#map=11/48.0035/12.1653)
+
+**Study region**: [River Inn around Wasserburg](https://www.openstreetmap.org/#map=11/48.0035/12.1653)
 
 ## Content of the repository
 
