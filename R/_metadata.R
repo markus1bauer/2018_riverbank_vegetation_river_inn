@@ -22,7 +22,7 @@ creator <- eml$creator(
     givenName = "Markus",
     surName = "Bauer"
   ),
-  electronicMailAddress = "markusbauer@mailbox.org"
+  electronicMailAddress = "markus1.bauer@tum.org"
 )
 
 address <- list(
