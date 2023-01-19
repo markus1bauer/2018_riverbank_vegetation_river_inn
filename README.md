@@ -43,10 +43,10 @@ When using the __data available__ in this repository, please cite the original p
 
 **Publication**
 
-> Bauer M, Harzer R, Strobl K, Kollmann J (2018). Resilience of riparian vegetation after restoration measures on River Inn. – *River Research and Applications* 34, 451-460. https://doi.org/10.1002/rra.3255
+> Bauer M, Harzer R, Strobl K, Kollmann J (2018) Resilience of riparian vegetation after restoration measures on River Inn. &ndash; *River Research and Applications* 34, 451&ndash;460. [DOI: 10.1002/rra.3255](https://doi.org/10.1002/rra.3255)
 
 **Dataset**
 
-> Bauer M, Harzer R, Strobl K & Kollmann J (2022) Data and code for Bauer et al. (2018) Riv Res Appl (v1.1.0) [Data set]. – *Zenodo*. https://doi.org/10.5281/zenodo.6124931 
+> Bauer M, Harzer R, Strobl K, Kollmann J (2022) Data and code for Bauer et al. (2018) Riv Res Appl (v1.1.0) [Data set]. &ndash; *Zenodo*. [DOI: 10.5281/zenodo.6078108](https://doi.org/10.5281/zenodo.6078108)
 
 Contact markus1.bauer@tum.de for any further information.  
