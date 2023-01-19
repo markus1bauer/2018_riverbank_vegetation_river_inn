@@ -2,6 +2,8 @@
 
 _Markus Bauer <a href="https://orcid.org/0000-0001-5372-4174"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height = "16"></a>, Romy Harzer <a href="https://orcid.org/0000-0001-9186-5349"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height = "16"></a>, Katharina Strobl <a href="https://orcid.org/0000-0002-2380-201X"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height = "16"></a> and Johannes Kollmann <a href="https://orcid.org/0000-0002-4990-3636"><img src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height = "16"></a>_  
 
+Data and code for:
+
 Bauer M, Harzer R, Strobl K, Kollmann J (2018) __Resilience of riparian vegetation after restoration measures on River Inn.__ &ndash; *River Research and Applications* 34, 451&ndash;460.
 
 [![DOI:10.1002/rra.3255](http://img.shields.io/badge/DOI-10.1002/rra.3255-informational.svg)](https://doi.org/10.1002/rra.3255)
@@ -20,7 +22,7 @@ Bauer M, Harzer R, Strobl K, Kollmann J (2018) __Resilience of riparian vegetati
 4. __R__: the folder `R` contains  
     * Scripts (.R) for statistical analyses and to generate all figures used in the manuscript.
 
-### Package versioning
+#### Package versioning
 
 The used versions of R and the packages are saved in `2018_riverbank_vegetation_river_inn/renv.lock`.
 
