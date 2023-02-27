@@ -4,8 +4,8 @@ plot,plot ID,na,character,na,block ID + plot Number
 block,block ID,na,character,na,na
 year,year of observation,na,factor,Control = negative reference observed in 2014 / 2014 / 2016,na
 site,site name of the observations,na,character,na,na
-easting,X coordinate / UTM32 / EPSG 25832,na,numeric,na,na
-northing,Y coordinate / UTM32 / EPSG 25832,na,numeric,na,na
+easting,X coordinate / GK4 / EPSG 31468,na,numeric,na,na
+northing,Y coordinate / GK4 / EPSG 31468,na,numeric,na,na
 date,date of observation,YYYY-mm-dd,date,na,na
 barrier,next barrier downstream,na,character,na,https://geoportal.bayern.de/bayernatlas/
 barrierriverKm,River kilometer of the barrier downstream,km,numeric,na,https://geoportal.bayern.de/bayernatlas/
