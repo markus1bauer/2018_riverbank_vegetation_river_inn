@@ -3,6 +3,8 @@ no,serial number,na,na,numeric,na,na
 plot,plot ID,na,na,character,na,block ID + plot Number
 block,block ID,na,na,character,na,na
 year,year of observation,na,na,factor,Control = negative reference observed in 2014 / 2014 / 2016,na
+lat,Coordinates Y of plot (latitude / EPSG: 4326 / WGS84),na,na,numeric,na,na
+lon,Coordinates X of plot (Longitude / EPSG: 4326 / WGS84),na,na,numeric,na,na
 treatment,restoration measurement,na,na,factor,Embankment removal / Gravel supply / Sand supply,treatment for control sites is hypothetical
 habitatType,category of habitat type,na,na,character,na,na
 shrubHeight,na,na,centimeter,numeric,na,na
