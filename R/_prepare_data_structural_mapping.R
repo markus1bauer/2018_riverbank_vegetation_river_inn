@@ -20,9 +20,12 @@ setwd(here("data", "raw"))
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+
 ### Load data ###
-sites <- read_csv("data_raw_structural_mapping.csv",
-  col_names = TRUE, na = "na",
+sites <- read_csv(
+  "data_raw_structural_mapping.csv",
+  col_names = TRUE,
+  na = "na",
   col_types =
     cols(
       .default = col_double(),
@@ -64,4 +67,7 @@ sites <- sites %>%
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-write_csv(sites, here("data", "processed", "data_processed_structural_mapping.csv"))
+
+write_csv(
+  sites, here("data", "processed", "data_processed_structural_mapping.csv")
+  )
