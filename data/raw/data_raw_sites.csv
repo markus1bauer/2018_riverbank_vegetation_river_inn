@@ -29,11 +29,11 @@
 28,krok3,rok3,krok,Control,Attler_Au,4513400,5320510,2014-08-05,Wasserburg,158.9,na,Gravel supply,2,Reed,0,0,10,60,0,40,na,na,6
 29,krok4,rok4,krok,Control,Attler_Au,4513404,5320515,2014-08-05,Wasserburg,158.9,na,Gravel supply,2,Reed,0,0,15,70,0,2.5,na,na,6
 30,krok5,rok5,krok,Control,Attler_Au,4513409,5320517,2014-08-05,Wasserburg,158.9,na,Gravel supply,2,Reed,0,0,60,50,0,60,na,na,6.5
-31,kfrs1,frs1,kfrs,Control,Freihamer_Au,na,na,2014-08-18,Wasserburg,158.9,na,Sand supply,2,Reed,0,0,170,100,40,40,na,na,6
-32,kfrs2,frs2,kfrs,Control,Freihamer_Au,na,na,2014-08-18,Wasserburg,158.9,na,Sand supply,2,Reed,0,0,190,90,10,30,na,na,6
-33,kfrs3,frs3,kfrs,Control,Freihamer_Au,na,na,2014-08-18,Wasserburg,158.9,na,Sand supply,2,Reed,0,0,260,100,2.5,10,na,na,6
-34,kfrs4,frs4,kfrs,Control,Freihamer_Au,na,na,2014-08-18,Wasserburg,158.9,na,Sand supply,2,Reed,0,0,170,100,0,0,na,na,6
-35,kfrs5,frs5,kfrs,Control,Freihamer_Au,na,na,2014-08-18,Wasserburg,158.9,na,Sand supply,2,Reed,0,0,160,100,10,10,na,na,6
+31,kfrs1,frs1,kfrs,Control,Freihamer_Au,4514378,5320771,2014-08-18,Wasserburg,158.9,na,Sand supply,2,Reed,0,0,170,100,40,40,na,na,6
+32,kfrs2,frs2,kfrs,Control,Freihamer_Au,4514378,5320771,2014-08-18,Wasserburg,158.9,na,Sand supply,2,Reed,0,0,190,90,10,30,na,na,6
+33,kfrs3,frs3,kfrs,Control,Freihamer_Au,4514378,5320771,2014-08-18,Wasserburg,158.9,na,Sand supply,2,Reed,0,0,260,100,2.5,10,na,na,6
+34,kfrs4,frs4,kfrs,Control,Freihamer_Au,4514378,5320771,2014-08-18,Wasserburg,158.9,na,Sand supply,2,Reed,0,0,170,100,0,0,na,na,6
+35,kfrs5,frs5,kfrs,Control,Freihamer_Au,4514378,5320771,2014-08-18,Wasserburg,158.9,na,Sand supply,2,Reed,0,0,160,100,10,10,na,na,6
 36,kvos1,vos1,kvos,Control,Vorderleiten,4517812,5328681,2014-08-05,Teufelsbruck,147.2,na,Sand supply,2,Reed,0,0,100,100,0,0,na,na,6
 37,kvos2,vos2,kvos,Control,Vorderleiten,4517814,5328673,2014-08-05,Teufelsbruck,147.2,na,Sand supply,2,Reed,0,0,170,100,0,0,na,na,6
 38,kvos3,vos3,kvos,Control,Vorderleiten,4517807,5328665,2014-08-05,Teufelsbruck,147.2,na,Sand supply,2,Reed,0,0,180,100,0,0,na,na,6
