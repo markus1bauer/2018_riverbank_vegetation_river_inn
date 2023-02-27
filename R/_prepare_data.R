@@ -8,12 +8,12 @@
 ### Packages ###
 library(here)
 library(tidyverse)
+library(sf)
 library(vegan)
 
 ### Start ###
 renv::status()
-rerm(list = ls())
-setwd(here("data", "raw"))
+rm(list = ls())
 
 
 
@@ -22,10 +22,14 @@ setwd(here("data", "raw"))
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+
 ### 1 Load data ###############################################################
 
-sites <- read_csv("data_raw_sites.csv",
-  col_names = TRUE, na = "na",
+
+sites <- read_csv(
+  here("data", "raw", "data_raw_sites.csv"),
+  col_names = TRUE,
+  na = "na",
   col_types =
     cols(
       .default = "?",
@@ -40,8 +44,10 @@ sites <- read_csv("data_raw_sites.csv",
       )
 )
 
-species <- read_csv("data_raw_species.csv",
-  col_names = TRUE, na = "na",
+species <- read_csv(
+  here("data", "raw", "data_raw_species.csv"),
+  col_names = TRUE,
+  na = "na",
   col_types =
     cols(
       .default = "d",
@@ -49,8 +55,10 @@ species <- read_csv("data_raw_species.csv",
     )
 )
 
-traits <- read_csv("data_raw_traits.csv",
-  col_names = TRUE, na = "na",
+traits <- read_csv(
+  here("data", "raw", "data_raw_traits.csv"),
+  col_names = TRUE,
+  na = "na",
   col_types =
     cols(
       .default = "?",
@@ -65,7 +73,9 @@ traits <- read_csv("data_raw_traits.csv",
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+
 ### 1 Simple variables ########################################################
+
 
 sites <- sites %>%
   mutate(
@@ -74,6 +84,20 @@ sites <- sites %>%
     barrier_distance = plotriverKm - barrierriverKm
   )
 
+### Transform variables ###
+sites <- left_join(
+  sites %>%
+    select(-easting, -northing),
+  sites %>%
+    st_as_sf(coords = c("easting", "northing"), crs = 31468) %>%
+    st_transform(crs = 4326) %>%
+    sfheaders::sf_to_df() %>%
+    rename(lat = y, lon = x) %>%
+    rename(no = sfg_id),
+  by = "no"
+)
+  
+### Associate each species with plant sociological ID ###
 traits <- traits %>%
   separate(name, into = c("genus", "species", "x", "subspecies"), sep = "_",
            remove = FALSE, extra = "merge", fill = "right") %>%
@@ -114,7 +138,9 @@ traits <- traits %>%
     )
 
 
+
 ### 2 Species richness ########################################################
+
 
 diversity <- species %>%
   column_to_rownames("name") %>%
@@ -127,7 +153,9 @@ sites <- sites %>%
   )
 
 
+
 ### 3 Life forms ##############################################################
+
 
 lifeform <- traits %>%
   select(name, lifeform)
@@ -177,14 +205,16 @@ sites <- sites %>%
 rm(list = setdiff(ls(), c("sites", "species", "traits")))
 
 
+
 ### 5 Final selection of variables #############################################
+
 
 traits <- traits %>%
   select(name, abb, lifeform, growthform, n, f, typ, neo)
 
 sites <- sites %>%
   select(
-    no, plotTemp, plot, block, year, barrier_distance, treatment,
+    no, plotTemp, plot, block, year, lat, lon, barrier_distance, treatment,
     shrubHeight, shrubCover, herbHeight, herbCover, soilCover,
     conf.low, conf.high,
     speciesrichness, shannon, simpson,
@@ -192,9 +222,12 @@ sites <- sites %>%
     reed_cover, sand_cover, gravel_cover
   )
 
+
+
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # C Save ######################################################################
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 
 write_csv(species, here("data", "processed", "data_processed_species.csv"))
